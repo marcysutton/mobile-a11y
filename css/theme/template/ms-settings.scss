@@ -1,0 +1,56 @@
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: #333;
+$backgroundImage: ""; //url("backgrounds/space.jpg")
+
+// Primary/body text
+$mainFont: 'RobotoDraft', sans-serif;
+$secondaryFont: 'Rokkitt', serif;
+$codeFont: Menlo, monospace;
+$mainFontSize: 3.5rem;
+$darkColor: #333;
+$transparentBlack: rgba(0, 0, 0, 0.85);
+$mainColor: #fff;
+$headingColor: #fff;
+$secondaryColor: #999;
+$tertiaryColor: #ccc;
+$mutedColor: #999;
+$white: #fff;
+$alertColor: #ff0000;
+
+// Headings
+$headingMargin: 0 0 20px 0;
+$headingFont: $secondaryFont;
+$headingFontWeight: 700;
+$headingLineHeight: 1em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: none;
+$headingTextShadow: 2px 2px 6px #000;
+$paragraphTextShadow: 1px 3px 3px #000;
+$paragraphFontSize: 1.5em;
+$paragraphLineHeight: 1.25em;
+
+// Links and actions
+$linkColor: #56FFF9;
+$linkColorHover: #fff;
+$altLinkColor: #55491F;
+$buttonColor: #4285f4;
+$buttonTextColor: $white;
+
+$separatorColor: transparentize(#000000, 0.88);
+$separatorHeight: 5px;
+
+// Text selection
+$selectionBackgroundColor: #97948f;
+$selectionColor: $white;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: $backgroundColor;
+}
+
+// breakpoints
+$mobile: "(max-width: 600px)";
