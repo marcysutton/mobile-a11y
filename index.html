@@ -44,19 +44,209 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-          <h1>Mobile Accessibility 101</h1>
-					<p>Marcy Sutton, Seattle, USA<br>Accessibility Engineer, Angular Core Team Member</p>
+          <h1>Mobile Accessibility for Developers</h1>
+					<p>Marcy Sutton, Seattle, USA<br>
+          Accessibility Engineer at Adobe, Angular Core Team Member</p>
 					<p><a href="http://marcysutton.com/OWC">http://marcysutton.com/OWC</a></p>
 				</section>
 
-        <section>
+        <section data-background="img/things-about-my-phone.jpg" data-background-size="auto 100%" data-background-color="#fff">
+          <div class="offscreen">
+            <h2>Things my phone can do vs. things I need: a Venn diagram</h2>
+            <h3>Things my phone can do</h3>
+            <ul>
+              <li>Connect to the Internet</li>
+              <li>Play Games</li>
+              <li>Take photos</li>
+              <li>Go into airplane mode</li>
+              <li>Text Message</li>
+              <li>Buy things</li>
+              <li>Play music</li>
+              <li>Hang up on people</li>
+              <li>Lag</li>
+              <li>Fall apart</li>
+              <li>Freeze</li>
+              <li>Cost Money</li>
+            </ul>
+            <h3>Things I need my phone to do:</h3>
+            <ul>
+              <li>Make phone calls</li>
+              <li>Work correctly</li>
+            </ul>
+          </div>
+          <div class="fragment" id="work-correctly">
+            <span class="offscreen">Work correctly</span>
+          </div>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h2 class="h4-style" id="mobileDesktopQuestion">Do you use a mobile/tablet screen reader more than a desktop/laptop screen reader?</h2>
+
+          <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey</a></p>
+
+          <a href="http://webaim.org/projects/screenreadersurvey5/#mobile"><img src="img/webaim-mobile-desktop-chart.png" alt="WebAIM Chart showing mobile vs. desktop/laptop usage" class="plain" style="max-height: 400px;"></a>
           
+          <table aria-describedby="mobileDesktopQuestion" class="offscreen">
+            <tbody>
+              <tr>
+              <th>Response</th>
+              <th># of Respondents</th>
+              <th>% of Respondents</th>
+            </tr>
+            <tr>
+              <td>No</td>
+              <td>753</td>
+              <td>56%</td>
+            </tr>
+            <tr>
+              <td>About the same</td>
+              <td>432</td>
+              <td>32%</td>
+            </tr>
+            <tr>
+              <td>Yes</td>
+              <td>160</td>
+              <td>12%</td>
+            </tr>
+          </tbody></table>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h2>Mobile Platform Usage</h2>
+          <a href="http://webaim.org/projects/screenreadersurvey5/#mobile" class="image">
+            <img src="img/mobileplatformusage.png" class="plain" 
+               style="min-height: 500px;"
+               alt="iOS device usage among screen reader users is notably higher than for the standard population, whereas Android usage is much, much lower. Those with more advanced screen reader and internet proficiency were much more likely to use iOS over Android or Nokia.">
+          </a>
+        </section>
+
+        <section>
+          <h2>iOS Accessibility Features</h2>
+
+        </section>
+
+        <section>
+          <h2>Android Accessibility Features</h2>
+          
+        </section>
+
+        <section>
+          <h2>Let's talk about&hellip;</h2>
+          <ul>
+            <li>Barriers</li>
+            <li>Scenarios</li>
+            <li>Debugging</li>
+            <li>UI Patterns</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="h1-style">Barriers</h2>
+        </section>
+
+        <section>
+          <h3 class="offscreen">Barriers - continued</h3>
+          <ul>
+            <li>Visual clutter</li>
+            <li>Everything's too SMALL</li>
+            <li>Locked-down zoom/scrolling</li>
+            <li>Ambiguous visual icons</li>
+          </ul>
+        </section>
+
+        <section data-background="img/android_fragmentation.png" class="light-theme">
+          <h3 class="giant">Fragmentation</h3>
+          
+        </section>
+
+        <section>
+          <blockquote>Tests should be carried out in the native browser in iOS Android or any other of your supported devices without any accessibility settings or support running as well as a combination of settings and support running i.e. zoom, voice output, inverse colours etc.
+          <cite><a href="http://www.iheni.com/mobile-accessibility-tests/">Henny Swan</a></cite></blockquote>
+        </section>
+
+        <section>
+          <h3>Spotty AT support</h3>
+        </section>
+
+        <section>
+          <h2 class="h1-style">Scenarios</h2>
+        </section>
+
+        <section>
+          <h3>Mobile web vs. hybrid vs. native</h3>
+        </section>
+
+        <section>
+          <h3>BBC Mobile Accessibility Guidelines</h3>
+        </section>
+
+        <section>
+          <h2>Browser debugging</h2>
+        </section>
+
+        <section>
+          <h3><a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome on Android</a></h3>
+        </section>
+
+        <section>
+          <h3><a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">Firefox for Android</a></h3>
+          <img src="img/remote-debugging-overview-fx36.png" alt="Connect via USB to access Dev Tools">
+        </section>
+
+        <section>
+          <h3>Safari</h3>
+        </section>
+
+        <section>
+          <h3>What about...</h3>
+          <h4><a href="http://google-opensource.blogspot.com/2011/10/test-your-mobile-web-apps-with.html">Automating Mobile Web Testing?</a></h4>
+          <ul>
+            <li>Launching a real mobile browser and asserting things</li>
+            <li>Testing the accessibility tree</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="h1-style">Patterns</h2>
+        </section>
+
+        <section>
+          <h3>Source Order</h3>
+          
+        </section>
+
+        <section>
+          <h3>Fancy Layouts and Scrolling</h3>
+        </section>
+
+        <section>
+          <h3>Mobile Tab Order Swipe</h3>
+
+        </section>
+
+        <section>
+          <h3>Dialogs</h3>
+          <p>Key requirements</p>
+          <ul>
+            <li>Focus management</li>
+            <li>Enclose interaction</li>
+            <li>Roles</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Angular Material Dialog</h3>
+        </section>
+
+        <section>
+          <h3>Native Dialog + Polyfill</h3>
         </section>
 
         <section>
           <h2>Resources</h2>
           <p class="offscreen"><em>All links open in new windows</em></p>
           <ul>
+            <li><a href="http://www.slideshare.net/iheni/introduction-to-mobile-accessibility-2015">Introduction to Mobile Accessibility</a> - Henny Swan</li>
           </ul>
         </section>
 

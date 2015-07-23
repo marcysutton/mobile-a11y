@@ -288,23 +288,23 @@ body {
     line-height: 1.5;
   }
   h1, h2.h1-style, h3.h1-style {
-    font-size: 3.25em;
+    font-size: 4.5em;
   }
   h2,
   h1.h2-style,
   h3.h2-style,
   p.h2-style {
-    font-size: 2.5em;
+    font-size: 3.5em;
   }
   h3,
   h2.h3-style,
   p.h3-style {
-    font-size: 1.75em;
+    font-size: 2.25em;
   }
   h4, h2.h4-style,
   h3.h4-style,
   p.h4-style {
-    font-size: 1.45em;
+    font-size: 1.75em;
     // font-weight: bold;
   }
   h2 strong,
@@ -316,6 +316,20 @@ body {
   }
   .smaller {
     font-size: 70%;
+  }
+  .giant {
+    font-size: 6em;
+    text-shadow: #fff -1px -1px,
+                 #fff -2px -2px,
+                 #fff -3px -3px,
+                 #fff -4px -4px,
+                 #fff -5px -5px,
+                 #fff -6px -6px,
+                 #fff -7px -7px,
+                 #fff -8px -8px,
+                 #fff -9px -9px,
+                 #fff -10px -10px,
+                 #fff -11px -11px !important;
   }
   small {
     font-size: 0.85em;
@@ -555,7 +569,6 @@ body {
   a:not(.image), .highlight {
     border: 1px solid transparent;
   	color: $linkColor;
-  	text-decoration: none;
 
   	-webkit-transition: all .5s;
   	   -moz-transition: all .5s;
@@ -563,9 +576,9 @@ body {
   	     -o-transition: all .5s;
   	        transition: all .5s;
   }
-	a:not(.image):hover, a:not(.image):focus {
-    border: 1px dotted currentColor;
-	}
+	// a:not(.image):hover, a:not(.image):focus {
+ //    border: 2px dotted currentColor;
+	// }
 
   .roll span:after {
   	color: $white;
@@ -611,8 +624,6 @@ body {
   }
 
 	a:hover, a:focus {
-    outline: none;
-
     img {
   		background: rgba(255,255,255,0.2);
   		border-color: $linkColor;
@@ -669,8 +680,9 @@ body {
  *********************************************/
 .reveal {
   table {
-    font-size: 0.75em;
+    font-size: 1.05em;
     line-height: 1;
+    width: 100%;
 
     tbody tr {
       border-top: 1px solid rgba(0,0,0,0.12);
@@ -690,6 +702,24 @@ body {
       &:last-child {
         border-right-width: 0;
       }
+    }
+    caption {
+      @extend .h3-style;
+      font-family: $headingFont;
+      margin: 0 auto 1em;
+      width: 70%;
+    }
+  }
+
+  .light-theme {
+    color: $backgroundColor;
+    
+    * {
+      color: $backgroundColor;
+      text-shadow: none;
+    }
+    a {
+      color: $altLinkColor;
     }
   }
 }
@@ -871,86 +901,6 @@ body {
     outline: none;
     text-align: left
   }
-  .hamburger-button {
-    background-color: transparent;
-    border: 6px solid transparent;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    padding-top: 61%;
-    position: relative;
-    width: 120px;
-    text-shadow: $paragraphTextShadow;
-    transition: border-color 0.25s;
-
-    &:before {
-      background: transparent url(../../img/hamburger.svg) no-repeat;
-      background-size: 100%;
-      content: '';
-      color: $mainColor;
-      display: block;
-      bottom: 0.5em;
-      left: 0.5em;
-      position: absolute;
-      right: 0.5em;
-      top: 0.5em;
-    }
-    &:focus, &:hover {
-      border: 6px solid $linkColor;
-    }
-  }
-  .hamburger-menu {
-    display: inline-block;
-    padding: 0.5em 2em;
-    max-height: 3em;
-    overflow: hidden;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
-    -webkit-transition: 1s;
-    transition: 1s;
-
-    &.active {
-      max-height: 500px;
-    }
-    li a {
-      -webkit-transition: all .5s;
-         -moz-transition: all .5s;
-          -ms-transition: all .5s;
-           -o-transition: all .5s;
-              transition: all .5s;
-
-      &:hover, &:focus {
-        color: $linkColorHover;
-        border-bottom: 1px solid $linkColorHover;
-      }
-    }
-  }
-  #hamburgerTextDiv {
-    position: relative;
-    z-index: 1;
-
-    h2 {
-      display: inline-block;
-      padding: 0 0.25em;
-    }
-
-    &.initialized {
-      h2 {
-        color: $backgroundColor;
-        text-shadow: none;
-      }
-    }
-  }
-  #hamburgerImgDiv {
-    background-repeat: repeat;
-    background-position: left center;
-    background-size: contain;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
   .themed-button {
     background-color: $buttonColor;
     border-radius: 3px;
@@ -1019,52 +969,12 @@ body {
     background: transparent;
     border-left-color: rgba(255, 255, 255, 1);
   }
-  .sparkle-party {
-    @extend .play;
-    min-height: 720px;
-    position: relative;
-
-    .enabled button {
-      display: none;
-    }
-    button {
-      background: black url(../../img/sparkle-party.jpg) no-repeat;
-      background-size: cover;
-      border: 0;
-      border-radius: none;
-      box-shadow: 2px 2px 2px #000;
-      cursor: pointer;
-      display: block;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      z-index: 1;
-    }
-    object {
-      height: 100%;
-      min-height: 720px;
-      width: 100%;
-    }
-  }
+  
   p.byline {
     font-size: 1.25em;
     margin-bottom: 4%;
     a {
       color: $white;
-    }
-  }
-  a.substantial-logo {
-    color: $linkColor;
-    font-size: 0.85em;
-    font-family: 'substantial-ico-fonts';
-    letter-spacing: 0.3em;
-    margin-left: 2%;
-    position: relative;
-    text-shadow: none;
-
-    &:hover, &:focus {
-      color: $white;
-      text-decoration: none;
     }
   }
   .image-headline {
@@ -1092,61 +1002,20 @@ body {
       width: 100%;
     }
   }
+  .centered {
+    margin: auto;
+    text-align: left;
+    width: 70%;
+  }
+  #work-correctly {
+    border: 5px solid red;
+    border-radius: 50px;
+    position: absolute;
+    height: 26%;
+    min-height: 60px;
+    min-width: 130px;
+    right: 13%;
+    margin-top: 8%;
+    width: 22%;
+  }
 }
-
-/* fonts */
-.jqcloud {
-  font-size: 0.65em;
-  /*text-shadow: 1px 3px 3px #000;*/ }
-
-.jqcloud a {
-  font-size: inherit;
-  text-decoration: none; }
-
-.jqcloud span.w10 {
-  font-size: 550%;
-  line-height: 100%; }
-
-.jqcloud span.w9 {
-  font-size: 500%;
-  line-height: 100%; }
-
-.jqcloud span.w8 {
-  font-size: 450%;
-  line-height: 100%; }
-
-.jqcloud span.w7 {
-  font-size: 400%;
-  line-height: 100%; }
-
-.jqcloud span.w6 {
-  font-size: 350%;
-  line-height: 100%; }
-
-.jqcloud span.w5 {
-  font-size: 300%;
-  line-height: 100%; }
-
-.jqcloud span.w4 {
-  font-size: 250%;
-  line-height: 100%; }
-
-.jqcloud span.w3 {
-  font-size: 200%;
-  line-height: 100%; }
-
-.jqcloud span.w2 {
-  font-size: 150%;
-  line-height: 100%; }
-
-.jqcloud span.w1 {
-  font-size: 100%;
-  line-height: 100%; }
-
-/* layout */
-.jqcloud {
-  overflow: hidden;
-  position: relative; }
-
-.jqcloud span {
-  padding: 0; }
