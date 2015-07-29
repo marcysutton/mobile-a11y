@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Mobile Accessibility 101</title>
+		<title>Mobile Accessibility for Developers</title>
 
-		<meta name="description" content="Mobile Accessibility 101">
+		<meta name="description" content="Mobile Accessibility for Developers">
 
 		<meta name="author" content="Marcy Sutton">
 
@@ -50,7 +50,7 @@
 					<p><a href="http://marcysutton.com/OWC">http://marcysutton.com/OWC</a></p>
 				</section>
 
-        <section data-background="img/things-about-my-phone.jpg" data-background-size="auto 100%" data-background-color="#fff">
+        <section data-background="img/things-about-my-phone.jpg" data-background-size="contain" data-background-color="#fff">
           <div class="offscreen">
             <h2>Things my phone can do vs. things I need: a Venn diagram</h2>
             <h3>Things my phone can do</h3>
@@ -74,13 +74,13 @@
               <li>Work correctly</li>
             </ul>
           </div>
-          <div class="fragment" id="work-correctly">
+          <div class="fragment circled" id="work-correctly">
             <span class="offscreen">Work correctly</span>
           </div>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h2 class="h4-style" id="mobileDesktopQuestion">Do you use a mobile/tablet screen reader more than a desktop/laptop screen reader?</h2>
+          <h2 class="h3-style" id="mobileDesktopQuestion">Do you use a mobile screen reader more than a desktop screen reader?</h2>
 
           <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey</a></p>
 
@@ -112,22 +112,36 @@
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h2>Mobile Platform Usage</h2>
+          <h2 style="position: relative;">But...mobile</h2>
+          <img src="img/Mobile-stats-vs-desktop-users-global.jpg" 
+               alt="Time with mobile apps overtaking desktop web in 2014" 
+               class="plain" 
+               style="margin-top:-1.5em; margin-left:-2em;">
+          <aside class="notes">
+            -In the US, time spent with mobile apps exceeds desktop web access
+            -Smartphone penetration tops 75% of the US mobile market in Q4 2014
+          </aside>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <div class="left-align">
+            <p>April 28, 2015:</p>
+            <h3 class="h2-style" style="font-family: 'Roboto'">Number of mobile-only internet users now exceeds desktop-only in the U.S.</h3>
+            <p>Source: <a href="https://www.comscore.com/Insights/Blog/Number-of-Mobile-Only-Internet-Users-Now-Exceeds-Desktop-Only-in-the-U.S">Comscore</a></p>
+          </div>
+          <aside class="notes">
+            Very high usage in developing countries
+          </aside>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h2 style="margin-bottom:0">Mobile Platform Usage</h2>
+          <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey</a></p>
           <a href="http://webaim.org/projects/screenreadersurvey5/#mobile" class="image">
             <img src="img/mobileplatformusage.png" class="plain" 
                style="min-height: 500px;"
                alt="iOS device usage among screen reader users is notably higher than for the standard population, whereas Android usage is much, much lower. Those with more advanced screen reader and internet proficiency were much more likely to use iOS over Android or Nokia.">
           </a>
-        </section>
-
-        <section>
-          <h2>iOS Accessibility Features</h2>
-
-        </section>
-
-        <section>
-          <h2>Android Accessibility Features</h2>
-          
         </section>
 
         <section>
@@ -145,12 +159,22 @@
         </section>
 
         <section>
-          <h3 class="offscreen">Barriers - continued</h3>
+          <h3 class="offscreen">Barriers 1 of 2</h3>
           <ul>
             <li>Visual clutter</li>
             <li>Everything's too SMALL</li>
-            <li>Locked-down zoom/scrolling</li>
+            <li>Locked-down zoom</li>
+            <li>Hijacked scrolling</li>
             <li>Ambiguous visual icons</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="offscreen">Barriers 2 of 2</h3>
+          <ul>
+            <li>Mounted displays</li>
+            <li>One-handed interactions</li>
+            <li>Spotty AT support</li>
           </ul>
         </section>
 
@@ -159,13 +183,8 @@
           
         </section>
 
-        <section>
-          <blockquote>Tests should be carried out in the native browser in iOS Android or any other of your supported devices without any accessibility settings or support running as well as a combination of settings and support running i.e. zoom, voice output, inverse colours etc.
-          <cite><a href="http://www.iheni.com/mobile-accessibility-tests/">Henny Swan</a></cite></blockquote>
-        </section>
-
-        <section>
-          <h3>Spotty AT support</h3>
+        <section data-background-color="#999">
+          <img src="img/brad-frost-devices.jpg" alt="Brad Frost, Device Fatigue">
         </section>
 
         <section>
@@ -173,80 +192,234 @@
         </section>
 
         <section>
-          <h3>Mobile web vs. hybrid vs. native</h3>
-        </section>
-
-        <section>
-          <h3>BBC Mobile Accessibility Guidelines</h3>
-        </section>
-
-        <section>
-          <h2>Browser debugging</h2>
-        </section>
-
-        <section>
-          <h3><a href="https://developer.chrome.com/devtools/docs/remote-debugging">Chrome on Android</a></h3>
-        </section>
-
-        <section>
-          <h3><a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">Firefox for Android</a></h3>
-          <img src="img/remote-debugging-overview-fx36.png" alt="Connect via USB to access Dev Tools">
-        </section>
-
-        <section>
-          <h3>Safari</h3>
-        </section>
-
-        <section>
-          <h3>What about...</h3>
-          <h4><a href="http://google-opensource.blogspot.com/2011/10/test-your-mobile-web-apps-with.html">Automating Mobile Web Testing?</a></h4>
+          <h3 class="h2-style">Mobile Contexts</h3>
           <ul>
-            <li>Launching a real mobile browser and asserting things</li>
-            <li>Testing the accessibility tree</li>
+            <li>Native</li>
+            <li>Hybrid</li>
+            <li>
+              <span style="position: relative">
+                Mobile web
+                <span class="circled fragment" aria-hidden="true">Mobile web</span>
+              </span>
+            </li>
           </ul>
         </section>
 
-        <section>
-          <h2 class="h1-style">Patterns</h2>
+        <section class="light-theme" data-background-color="#fff">
+          <h3 style="font-size: 3em">iOS Accessibility<br>Features</h3>
+          <ul>
+            <li>Voiceover</li>
+            <li>Siri</li>
+            <li>Zoom</li>
+            <li>Invert colors</li>
+            <li>Switch control</li>
+          </ul>
+          <aside class="notes">
+            https://www.apple.com/accessibility/ios/
+          </aside>
+        </section>
+
+        <section class="light-theme" data-background-color="#fff">
+          <h3 style="font-size: 3em">Android Accessibility<br>Features</h3>
+          <ul>
+            <li>TalkBack</li>
+            <li>Switch access</li>
+            <li>Braille support</li>
+            <li>High contrast</li>
+          </ul>
+          <aside class="notes">
+            https://support.google.com/accessibility/android/answer/6006564?hl=en
+          </aside>
         </section>
 
         <section>
-          <h3>Source Order</h3>
-          
+          <h3 class="h2-style">Accessibility is easier to get right in native platforms</h3>
         </section>
 
         <section>
+          <h3 class="h2-style">But we&rsquo;re web developers!</h3>
+          <h4>What to do?</h4>
+          <aside class="notes">
+          I refuse to concede to native or even hybrid for accessibility. By focusing on mobile web, we can make it better.
+          </aside>
+        </section>
+
+        <section>
+          <h3 class="h2-style">Focus on making it better.</h3>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3 class="">BBC Mobile Accessibility Guidelines</h3>
+          <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/developers" style="display: block;"> 
+            <img src="img/BBC-mobile-a11y-guidelines.png" alt="BBC Mobile Accessibility Guidelines for Developers" class="" style="max-width: 90%;">
+          </a>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h2>Mobile browser debugging</h2>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>iOS Safari with Web Inspector</h3>
+          <div class="layeredFragments">
+            <div>
+              <img src="img/safari-tools.jpg" class="plain" alt="iPad with Developer Tools open on laptop">
+            </div>
+            <div class="fragment">
+              <img src="img/safari-web-inspector.png" class="plain" alt="Safari Web Inspector with Develop menu open" style="border: 1px solid #000;">
+            </div>
+          </div>
+          <p><small><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html" title="About Safari Web Inspector">How-to</a></small></p>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Firefox WebIDE</h3>
+          <img src="img/remote-debugging-overview-fx36.png" alt="Connect via USB to access Dev Tools" style="max-height: 600px" class="plain">
+          <p><small><a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE" title="Debugging Firefox for Android with WebIDE">How-to</a></small></p>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Chrome for Android</h3>
+          <img src="img/remote-debug-android.png" alt="" class="plain" style="min-height:400px;">
+          <p><small><a href="https://developer.chrome.com/devtools/docs/remote-debugging" title="Remote Debugging on Android with Chrome">How-to</a></small></p>
+        </section>
+
+        <section data-background-color="#333">
+          <h3 class="h4-style">That's cool but...</h3>
+          <h4 class="h2-style">We&rsquo;re in desperate need of better mobile web accessibility testing tools.</h4>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <p class="h4-style">What about...</p>
+          <h3 class="h2-style">Accessibility Developer Tools in Safari?</h3>
+          <p>Extension plz</p>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <p class="h4-style">What about...</p>
+          <h3 class="h2-style">Automating actual mobile browsers?</h3>
+          <p>Oh hai, Selenium WebDriver (<a href="http://selendroid.io/mobileWeb.html">Android</a> or <a href="https://ios-driver.github.io/ios-driver/">iOS</a>).</p>
+          <aside class="notes">
+            <p>Only helps by putting mobile more into our process, accessibility still could be left behind.</p>
+          </aside>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <p class="h4-style">What about...</p>
+          <h3 class="h2-style">Automated testing of screen reader output?</h3>
+          <p>Oh hai, Applescript</p>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <p class="h4-style">What about...</p>
+          <h3 class="h2-style">Exposing native test platforms to mobile web<sup>*</sup></h3>
+          <p><sup>*</sup>Just an idea</p>
+        </section>
+
+        <section>
+          <h2 class="h1-style">UI Patterns</h2>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Large hit targets</h3>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>HTML Source Order</h3>
+          <img src="img/mscom-chrome-devtools.jpg" alt="MarcySutton.com open in Devtools" style="min-height: 500px;">
+          <aside class="notes">
+            Avoid tabindex hacks
+          </aside>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
           <h3>Fancy Layouts and Scrolling</h3>
+          <img src="img/ios-style-sliding-menu.png" alt="" style="max-width: 90%">
         </section>
 
-        <section>
+        <section data-background-color="#fff" class="light-theme">
+          <h3>&ldquo;Page 1 of 1...&rdquo;</h3>
+          <img src="img/angular-material-mobile-1.png" alt="" style="margin-right: 2em;">
+          <img src="img/angular-material-mobile-2.png" alt="">
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Scrolling bug in iOS with Voiceover:<br>Resolved fixed!</h3>
+          <p><a href="https://bugs.webkit.org/show_bug.cgi?id=141893">https://bugs.webkit.org/show_bug.cgi?id=141893</a></p>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
           <h3>Mobile Tab Order Swipe</h3>
-
+          <!-- visual needed -->
         </section>
 
-        <section>
-          <h3>Dialogs</h3>
-          <p>Key requirements</p>
+        <section data-background-color="#fff" class="light-theme">
+          <h3 class="h2-style">Dialogs</h3>
+          <h4>Key requirements</h4>
           <ul>
             <li>Focus management</li>
             <li>Enclose interaction</li>
-            <li>Roles</li>
+            <li>Semantics</li>
           </ul>
         </section>
 
-        <section>
+        <section data-background-color="#fff" class="light-theme">
           <h3>Angular Material Dialog</h3>
         </section>
 
+        <section data-background-color="#fff" class="light-theme">
+          <h3>HTML5 Dialog</h3>
+          <div class="large-tag">
+            <pre><code class="html">
+  <dialog open>
+    <p>Greetings, one and all!</p>
+  </dialog>
+            </code></pre>
+          </div>
+        </section>
+
+        <section data-background-color="#3F3729" data-background-image="img/caniuse-dialog.png" data-background-size="contain">
+          <div class="offscreen">
+            <h3><a href="http://caniuse.com/#feat=dialog">Can I use the HTML5 dialog element?</a></h3>
+            <p>Only supported in Chrome and Opera</p>
+          </div>
+        </section>
+
+        <section data-background-color="whitesmoke" data-background-image="img/dialog-polyfill.png" data-background-size="contain">
+          <div class="offscreen">
+            <h3><a href="https://github.com/GoogleChrome/dialog-polyfill">Google Chrome Dialog Polyfill</a></h3>
+          </div>
+          <div style="position: absolute; min-height: 1000px; top: -400px; width:100%;">
+            <img src="img/tada.png" alt="" class="plain" style="position: absolute; left: -4%; top:2%">
+            <img src="img/tada.png" alt="" class="plain flip" style="position: absolute; right: 0; bottom: 50%;">
+            <img src="img/tada.png" alt="" class="plain" style="position: absolute; left: -1%; bottom:10%">
+          </div>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3 class="h2-style">Are we there yet?</h3>
+          <ul class="flexlist">
+            <li>Enclose interaction <span class="fragment thumbsup"></span></li>
+            <li>Focus management <span class="fragment"><span class="thumbsup"></span><span class="crossed-out err"></span></span></li>
+            <li>Semantics <span class="fragment"><span class="thumbsup"></span><span class="crossed-out err"></span></span></li>
+          </ul>
+          <aside class="notes">
+            -Focus mgmt: focus is dropped on close
+            -Role is only exposed in Chrome Canary
+          </aside>
+        </section>
+
         <section>
-          <h3>Native Dialog + Polyfill</h3>
+          <h2>Responsive UI Patterns</h2>
+
         </section>
 
         <section>
           <h2>Resources</h2>
           <p class="offscreen"><em>All links open in new windows</em></p>
           <ul>
-            <li><a href="http://www.slideshare.net/iheni/introduction-to-mobile-accessibility-2015">Introduction to Mobile Accessibility</a> - Henny Swan</li>
+            <li><a href="http://www.slideshare.net/iheni/introduction-to-mobile-accessibility-2015">Introduction to Mobile Accessibility by Henny Swan</a></li>
+            <li><a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/developers">BBC Mobile Accessibility Guidelines</a></li>
           </ul>
         </section>
 
@@ -257,7 +430,7 @@
 			</div>
 
 			<footer>
-        <p class="copyright">Mobile Accessibility 101<br>
+        <p class="copyright">Mobile Accessibility for Developers<br>
           <a href="http://twitter.com/marcysutton" target="_blank" title="Link opens in a new window">@marcysutton</a> <span aria-hidden="true">/</span> <a href="http://marcysutton.com/OWC" target="_blank" title="Link opens in a new window">marcysutton.com/OWC</a></p>
       </footer>
 		</div>

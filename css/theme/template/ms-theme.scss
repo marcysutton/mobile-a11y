@@ -287,17 +287,19 @@ body {
     text-shadow: $paragraphTextShadow;
     line-height: 1.5;
   }
-  h1, h2.h1-style, h3.h1-style {
+  h1, h2.h1-style, h3.h1-style, h4.h1-style {
     font-size: 4.5em;
   }
   h2,
   h1.h2-style,
   h3.h2-style,
+  h4.h2-style,
   p.h2-style {
     font-size: 3.5em;
   }
   h3,
   h2.h3-style,
+  h4.h3-style,
   p.h3-style {
     font-size: 2.25em;
   }
@@ -311,25 +313,10 @@ body {
   h3 strong {
     color: $linkColor;
   }
-  .larger {
-    font-size: 120%;
-  }
-  .smaller {
-    font-size: 70%;
-  }
   .giant {
+    color: $tertiaryColor !important;
     font-size: 6em;
-    text-shadow: #fff -1px -1px,
-                 #fff -2px -2px,
-                 #fff -3px -3px,
-                 #fff -4px -4px,
-                 #fff -5px -5px,
-                 #fff -6px -6px,
-                 #fff -7px -7px,
-                 #fff -8px -8px,
-                 #fff -9px -9px,
-                 #fff -10px -10px,
-                 #fff -11px -11px !important;
+    text-shadow: 4px 4px 8px #000 !important;
   }
   small {
     font-size: 0.85em;
@@ -495,7 +482,7 @@ body {
     margin-top: 0.5em;
 
     pre code {
-      font-size: 1.25em;
+      font-size: 2em;
     }
   }
   .larger-tag {
@@ -549,11 +536,14 @@ body {
       letter-spacing: 0;
       margin-bottom: 0.25em;
     }
-    &.smaller li {
-      font-size: 1.5em;
-      letter-spacing: 0;
-      line-height: 1.5em;
-      margin: 0;
+    &.smaller {
+      font-size: 1.75em;
+
+      li {
+        letter-spacing: 0;
+        line-height: 1.5em;
+        margin: 0;
+      }
     }
     &.smallest li {
       font-size: 0.75em;
@@ -631,6 +621,14 @@ body {
   		box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
     }
 	}
+  .flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: 'FlipH';
+  }
 }
 
 /*********************************************
@@ -714,12 +712,15 @@ body {
   .light-theme {
     color: $backgroundColor;
     
-    * {
+    p, ul, li, h1, h2, h3, h4, h5, h6, small, div {
       color: $backgroundColor;
       text-shadow: none;
     }
     a {
       color: $altLinkColor;
+    }
+    .layeredFragments > div {
+      background-color: $mainColor;
     }
   }
 }
@@ -808,18 +809,58 @@ body {
     z-index: 1;
   }
   .layeredFragments {
-    min-height: 400px;
+    min-height: 600px;
     position: relative;
 
     &> div {
-      background-color: $backgroundColor;
       position: absolute; 
       top: 0; 
       text-align: center; 
       width: 100%;
     }
     img {
-      min-height: 400px;
+      display: block;
+      min-height: 500px;
+      max-height: 600px;
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+  .flexlist {
+    max-width: 55%;
+    margin: 0 auto;
+
+    li {
+      align-items: center;
+      display: flex;
+
+      &> span {
+        display: block;
+        margin-left: auto;
+        position: relative;
+      }
+    }
+  }
+  .thumbsup {
+    background: url(../../img/thumbsup.png) no-repeat 0 0;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    min-height: 60px;
+    min-width: 60px;
+  }
+  .crossed-out {
+    height: 6px;
+    position: absolute;
+    width: 90px;
+    top: 60%;
+    left: -25%;
+
+    &.err {
+      background-color: red;
+    }
+    &.warn {
+      background-color: orange;
     }
   }
   .denotation {
@@ -1007,15 +1048,45 @@ body {
     text-align: left;
     width: 70%;
   }
-  #work-correctly {
-    border: 5px solid red;
-    border-radius: 50px;
+  .circled {
     position: absolute;
-    height: 26%;
-    min-height: 60px;
-    min-width: 130px;
-    right: 13%;
-    margin-top: 8%;
+    left: 0;
+
+    $circleWidth: .2em;
+
+    &:after {
+      border: $circleWidth solid darken($tertiaryColor, 5%);
+      border-top: none;
+      border-radius: 1.5em 1em 2em 1.5em;
+      bottom: -.3em;
+      content: '';
+      left: -.3em;
+      position: absolute;
+      right: -.3em;
+      top: -.1em;
+    }
+    &:before {
+      border-top: $circleWidth solid darken($tertiaryColor, 5%);
+      border-radius: .5em;
+      content: '';
+      height: 1em;
+      left: 0;
+      position: absolute;
+      top: -.2em;
+      transform: rotate(-1deg);
+      width: 5em;
+    }
+  }
+  #work-correctly {
     width: 22%;
+    height: 60px;
+    margin-left: 65%;
+    margin-top: 8%;
+
+    &.circled:before {
+      top: -.13em;
+      transform: rotate(-1deg);
+      width: 8.5em;
+    }
   }
 }
