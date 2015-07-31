@@ -134,11 +134,7 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background-color: #333;
-  background-image: "";
-  background-repeat: repeat;
-  background-position: center top;
-  background-size: cover; }
+  background-color: #333; }
 
 .reveal {
   background-color: rgba(0, 0, 0, 0.6);
@@ -370,10 +366,12 @@ body {
   .reveal section figure figcaption {
     color: #333;
     font-style: italic;
-    font-size: 1em;
+    font-size: 0.75em;
     margin: 0;
     padding: 0.2em 0 0.75em;
     text-align: center; }
+    .reveal section figure figcaption.larger {
+      font-size: 1em; }
 
 .reveal .left-align {
   text-align: left; }
@@ -457,13 +455,15 @@ body {
     margin: 0 auto; }
     .reveal ul.bulleted li {
       margin-bottom: 0.75em; }
+      .reveal ul.bulleted li a {
+        font-weight: normal; }
 
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a:not(.image), .reveal .highlight {
-  border: 1px solid transparent;
   color: #56FFF9;
+  font-weight: bold;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -664,7 +664,7 @@ body {
   z-index: 1; }
 
 .reveal .layeredFragments {
-  min-height: 600px;
+  min-height: 700px;
   position: relative; }
   .reveal .layeredFragments > div {
     position: absolute;
@@ -673,8 +673,8 @@ body {
     width: 100%; }
   .reveal .layeredFragments img, .reveal .layeredFragments iframe {
     display: block;
-    min-height: 500px;
-    max-height: 600px;
+    min-height: 600px;
+    max-height: 700px;
     margin: 0 auto; }
   .reveal .layeredFragments img {
     width: auto; }

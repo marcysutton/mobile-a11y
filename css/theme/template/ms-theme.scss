@@ -440,10 +440,14 @@ body {
       figcaption {
         color: $darkColor;
         font-style: italic;
-        font-size: 1em;
+        font-size: 0.75em;
         margin: 0;
         padding: 0.2em 0 0.75em;
         text-align: center;
+
+        &.larger {
+          font-size: 1em;
+        }
       }
     }
   }
@@ -557,6 +561,10 @@ body {
 
       li {
         margin-bottom: 0.75em;
+
+        a {
+          font-weight: normal;
+        }
       }
     }
   }
@@ -567,8 +575,9 @@ body {
 
 .reveal {
   a:not(.image), .highlight {
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
   	color: $linkColor;
+    font-weight: bold;
 
   	-webkit-transition: all .5s;
   	   -moz-transition: all .5s;
@@ -823,7 +832,7 @@ body {
     z-index: 1;
   }
   .layeredFragments {
-    min-height: 600px;
+    min-height: 700px;
     position: relative;
 
     &> div {
@@ -834,8 +843,8 @@ body {
     }
     img, iframe {
       display: block;
-      min-height: 500px;
-      max-height: 600px;
+      min-height: 600px;
+      max-height: 700px;
       margin: 0 auto;
     }
     img {
