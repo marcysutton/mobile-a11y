@@ -229,7 +229,7 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal .h2-style {
   color: #fff;
   font-family: "Rokkitt", serif;
   font-weight: 700;
@@ -450,6 +450,13 @@ body {
   .reveal ul.smallest li {
     font-size: 0.75em;
     letter-spacing: 0; }
+  .reveal ul.bulleted {
+    text-align: left;
+    list-style: disc;
+    max-width: 80%;
+    margin: 0 auto; }
+    .reveal ul.bulleted li {
+      margin-bottom: 0.75em; }
 
 /*********************************************
  * LINKS
@@ -462,6 +469,9 @@ body {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s; }
+
+.reveal a:not(.image):hover, .reveal a:not(.image):focus {
+  color: #ecff05; }
 
 .reveal .roll span:after {
   color: #fff;
@@ -577,7 +587,9 @@ body {
     color: #333;
     text-shadow: none; }
   .reveal .light-theme a {
-    color: #55491F; }
+    color: #333; }
+    .reveal .light-theme a:hover, .reveal .light-theme a:focus {
+      color: #55491F; }
   .reveal .light-theme .layeredFragments > div {
     background-color: #fff; }
 
@@ -659,11 +671,12 @@ body {
     top: 0;
     text-align: center;
     width: 100%; }
-  .reveal .layeredFragments img {
+  .reveal .layeredFragments img, .reveal .layeredFragments iframe {
     display: block;
     min-height: 500px;
     max-height: 600px;
-    margin: 0 auto;
+    margin: 0 auto; }
+  .reveal .layeredFragments img {
     width: auto; }
 
 .reveal .flexlist {
@@ -715,9 +728,9 @@ body {
     font-size: 1.5em; }
 
 .reveal .separator {
-  background-color: rgba(0, 0, 0, 0.12);
-  height: 5px;
-  line-height: 5px;
+  background-color: #fff;
+  height: 3px;
+  line-height: 3px;
   margin: 1em auto 0; }
 
 .reveal .inset-width-wider {
@@ -854,7 +867,7 @@ body {
   position: absolute;
   left: 0; }
   .reveal .circled:after {
-    border: 0.2em solid #d9eb00;
+    border: 0.2em solid #cfe000;
     border-top: none;
     border-radius: 1.5em 1em 2em 1.5em;
     bottom: -.3em;
@@ -864,7 +877,7 @@ body {
     right: -.3em;
     top: -.1em; }
   .reveal .circled:before {
-    border-top: 0.2em solid #d9eb00;
+    border-top: 0.2em solid #cfe000;
     border-radius: .5em;
     content: '';
     height: 1em;
@@ -880,6 +893,9 @@ body {
   margin-left: 65%;
   margin-top: 8%; }
   .reveal #work-correctly.circled:before {
+    border-color: #ff3300;
     top: -.13em;
     transform: rotate(-1deg);
     width: 8.5em; }
+  .reveal #work-correctly.circled:after {
+    border-color: #ff3300; }

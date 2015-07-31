@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Mobile Accessibility for Developers</title>
+		<title>Mobile Web Accessibility for Developers</title>
 
-		<meta name="description" content="Mobile Accessibility for Developers">
+		<meta name="description" content="Mobile Web Accessibility for Developers">
 
 		<meta name="author" content="Marcy Sutton">
 
@@ -43,14 +43,24 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+
+        <section>
+          <p class="h2-style">Mobile</p>
+          <figure>
+            <img src="img/awkward-poodle.jpg" style="display: inline-block; margin-right: 1em; vertical-align: middle" alt="Poodle holding iPad: Awkward Stock Photo">
+            <img src="img/awkward-ninjas.jpg" style="display: inline-block; vertical-align: middle" alt="Mobile device with ninjas: Awkward Stock Photo">
+            <figcaption><small><a href="http://awkwardstockphotos.com/archive">Awkward Stock Photos</a></small></figcaption>
+          </figure>
+        </section>
+
 				<section>
-          <h1>Mobile Accessibility for Developers</h1>
+          <h1>Mobile Web Accessibility for Developers</h1>
 					<p>Marcy Sutton, Seattle, USA<br>
           Accessibility Engineer at Adobe, Angular Core Team Member</p>
-					<p><a href="http://marcysutton.com/OWC">http://marcysutton.com/OWC</a></p>
+					<p><a href="http://marcysutton.com/owc">http://marcysutton.com/owc</a></p>
 				</section>
 
-        <section data-background="img/things-about-my-phone.jpg" data-background-size="contain" data-background-color="#fff">
+        <section data-background="img/things-about-my-phone.png" data-background-size="contain" data-background-color="#fff">
           <div class="offscreen">
             <h2>Things my phone can do vs. things I need: a Venn diagram</h2>
             <h3>Things my phone can do</h3>
@@ -73,6 +83,7 @@
               <li>Make phone calls</li>
               <li>Work correctly</li>
             </ul>
+            <p>By <a href="http://failureconfetti.smackjeeves.com">Failure Confetti</a></p>
           </div>
           <div class="fragment circled" id="work-correctly">
             <span class="offscreen">Work correctly</span>
@@ -111,7 +122,7 @@
           </tbody></table>
         </section>
 
-        <section data-background-color="#fff" class="light-theme">
+        <!-- <section data-background-color="#fff" class="light-theme">
           <h2 style="position: relative;">But...mobile</h2>
           <img src="img/Mobile-stats-vs-desktop-users-global.jpg" 
                alt="Time with mobile apps overtaking desktop web in 2014" 
@@ -121,7 +132,7 @@
             -In the US, time spent with mobile apps exceeds desktop web access
             -Smartphone penetration tops 75% of the US mobile market in Q4 2014
           </aside>
-        </section>
+        </section> -->
 
         <section data-background-color="#fff" class="light-theme">
           <div class="left-align">
@@ -130,7 +141,9 @@
             <p>Source: <a href="https://www.comscore.com/Insights/Blog/Number-of-Mobile-Only-Internet-Users-Now-Exceeds-Desktop-Only-in-the-U.S">Comscore</a></p>
           </div>
           <aside class="notes">
-            Very high usage in developing countries
+            -In the US, time spent with mobile apps exceeds desktop web access
+            -Smartphone penetration tops 75% of the US mobile market in Q4 2014
+            -Very high usage in developing countries
           </aside>
         </section>
 
@@ -148,7 +161,7 @@
           <h2>Let's talk about&hellip;</h2>
           <ul>
             <li>Barriers</li>
-            <li>Scenarios</li>
+            <li>Contexts</li>
             <li>Debugging</li>
             <li>UI Patterns</li>
           </ul>
@@ -159,21 +172,23 @@
         </section>
 
         <section>
-          <h3 class="offscreen">Barriers 1 of 2</h3>
+          <h3 class="h4-style">Barriers</h3>
+          <div class="separator inset-width"></div>
           <ul>
+            <li>Ambiguous visual icons</li>
             <li>Visual clutter</li>
             <li>Everything's too SMALL</li>
-            <li>Locked-down zoom</li>
-            <li>Hijacked scrolling</li>
-            <li>Ambiguous visual icons</li>
+            <li>Mounted displays</li>
+            <li>One-handed interactions</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="offscreen">Barriers 2 of 2</h3>
+          <h3 class="h4-style">More barriers</h3>
+          <div class="separator inset-width"></div>
           <ul>
-            <li>Mounted displays</li>
-            <li>One-handed interactions</li>
+            <li>Locked-down zoom</li>
+            <li>Hijacked scrolling</li>
             <li>Spotty AT support</li>
           </ul>
         </section>
@@ -183,12 +198,11 @@
           
         </section>
 
-        <section data-background-color="#999">
-          <img src="img/brad-frost-devices.jpg" alt="Brad Frost, Device Fatigue">
-        </section>
-
-        <section>
-          <h2 class="h1-style">Scenarios</h2>
+        <section data-background-color="#fff" class="light-theme">
+          <figure>
+            <img src="img/brad-frost-devices.jpg" alt="Brad Frost, Device Fatigue">
+            <figcaption><small><a href="http://bradfrost.com/blog/post/device-fatigue">http://bradfrost.com/blog/post/device-fatigue/</a></small></figcaption>
+          </figure>
         </section>
 
         <section>
@@ -310,31 +324,48 @@
           <p>Oh hai, Applescript</p>
         </section>
 
-        <section data-background-color="#fff" class="light-theme">
+        <!--<section data-background-color="#fff" class="light-theme">
           <p class="h4-style">What about...</p>
           <h3 class="h2-style">Exposing native test platforms to mobile web<sup>*</sup></h3>
           <p><sup>*</sup>Just an idea</p>
-        </section>
+        </section>-->
 
         <section>
           <h2 class="h1-style">UI Patterns</h2>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h3>Large hit targets</h3>
+          <h3>Touch targets</h3>
+          <figure style="padding-right: 6%; display:inline-block;">
+            <figcaption>Don't: too small</figcaption>
+            <img src="img/creativebloq.png" alt="Small touch target size on Creative Bloq, ironically showing Top 10 Mobile design mistakes - and how to avoid them" style="max-height:700px;">
+          </figure>
+          <figure style="display:inline-block;">
+            <figcaption>Do: generous padding</figcaption>
+            <img src="img/simplyaccessible-mobile.png" alt="Mobile menu button goes full width on SimplyAccessible.com" style="max-height:700px">
+          </figure>
+          <aside class="notes">
+            See <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size">BBC Touch target size</a> 
+          </aside>
         </section>
 
-        <section data-background-color="#fff" class="light-theme">
-          <h3>HTML Source Order</h3>
-          <img src="img/mscom-chrome-devtools.jpg" alt="MarcySutton.com open in Devtools" style="min-height: 500px;">
-          <aside class="notes">
-            Avoid tabindex hacks
-          </aside>
+        <section data-background-color="#fff" class="light-theme" data-background-image="img/Rage-Face.gif" data-background-size="20%" data-background-position="right top">
+          <h3>Use buttons*</h3>
+          <img src="img/cnn-divbutton.png" alt="CNN doesn't know how" style="max-width: 90%;">
+          <p><small>*Use semantic elements</small></p>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
           <h3>Fancy Layouts and Scrolling</h3>
           <img src="img/ios-style-sliding-menu.png" alt="" style="max-width: 90%">
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>HTML Source Order</h3>
+          <img src="img/mscom-chrome-devtools.png" alt="MarcySutton.com open in Devtools" style="max-width: 90%;">
+          <aside class="notes">
+            Avoid tabindex hacks
+          </aside>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -350,21 +381,50 @@
 
         <section data-background-color="#fff" class="light-theme">
           <h3>Mobile Tab Order Swipe</h3>
-          <!-- visual needed -->
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <h3 class="h2-style">Dialogs</h3>
-          <h4>Key requirements</h4>
-          <ul>
-            <li>Focus management</li>
-            <li>Enclose interaction</li>
-            <li>Semantics</li>
-          </ul>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
           <h3>Angular Material Dialog</h3>
+          <div class="layeredFragments">
+            <div>
+              <iframe width="1090" height="610" src="https://www.youtube.com/embed/PRzmjKLWxGE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen title="Before"></iframe>
+              <button onclick="Reveal.nextFragment()" style="margin-top: 1em;">Next Video: After</button>
+            </div>
+            <div class="fragment" style="padding-bottom: 1em;">
+              <iframe width="1090" height="610" src="https://www.youtube.com/embed/CJ0Agr0Rx10?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen title="After"></iframe>
+              <button onclick="Reveal.prevFragment()" style="margin-top: 1em;">Previous Video</button>
+            </div>
+          </div>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Modal Dialogs</h3>
+          <ul>
+            <li>Use semantics</li>
+            <li>Trap focus</li>
+            <li>Disable background</li>
+          </ul>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Inert: disabling the background</h3>
+          <pre><code class="javascript">
+  function walkDOM(element) {
+    while (element.parentNode) {
+      if (element === document.body) {
+        return;
+      }
+      var children = element.parentNode.children;
+      for (var i = 0; i < children.length; i++) {
+        // skip over child if it is an ascendant of the dialog
+        if (element !== children[i]) {
+          children[i].setAttribute('aria-hidden', isHidden);
+        }
+      }
+      walkDOM(element = element.parentNode);
+    }
+  }
+          </code></pre>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -409,29 +469,61 @@
           </aside>
         </section>
 
-        <section>
-          <h2>Responsive UI Patterns</h2>
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Responsive Tabs to Accordion</h3>
+          <figure>
+            <div class="layeredFragments">
+              <div>
+                <img src="img/monsika-codepen1.png" alt="" class="plain">
+              </div>
+              <div class="fragment">
+                <img src="img/monsika-codepen2.png" alt="" class="plain">
+              </div>
+            </div>
+            <figcaption><small><a href="http://codepen.io/mpiotrowicz/full/gocmu/">Codepen by Monica Piotrowicz</a></small></figcaption>
+          </figure>
+        </section>
 
+        <section data-background-color="#fff" class="light-theme">
+          <h3 class="h2-style">We need more UIs that work for all mobile web users.</h3>
+        </section>
+
+        <section>
+          <h2>Let's Recap</h2>
+          <ul>
+            <li>Mobile is still growing</li>
+            <li class="fragment">We need testing tools</li>
+            <li class="fragment">Optimize for touch</li>
+            <li class="fragment">Use semantics</li>
+            <li class="fragment">Craft source &amp; tab order</li>
+            <li class="fragment">Make UI components respond</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="h1-style">Don't give up on mobile web accessibility.</h2>
         </section>
 
         <section>
           <h2>Resources</h2>
           <p class="offscreen"><em>All links open in new windows</em></p>
-          <ul>
-            <li><a href="http://www.slideshare.net/iheni/introduction-to-mobile-accessibility-2015">Introduction to Mobile Accessibility by Henny Swan</a></li>
+          <ul class="bulleted">
+            <li><a href="http://www.iheni.com/mobile-accessibility-guidelines/">Mobile Accessibility - Henny Swan</a></li>
             <li><a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/developers">BBC Mobile Accessibility Guidelines</a></li>
+            <li><a href="http://www.w3.org/WAI/mobile/">W3C-WAI on Mobile</a></li>
+            <li><a href="http://webaim.org/projects/screenreadersurvey5/">WebAIM Screen Reader Survey</a></li>
+            <li><a href="https://github.com/medialize/ally.js">A11y.js by Rodney Rehm</a></li>
           </ul>
         </section>
 
         <section>
-          <h2 class="foreground">The End.
-          </h2>
+          <h2 class="foreground">Thanks for listening!</h2>
         </section>
 			</div>
 
 			<footer>
-        <p class="copyright">Mobile Accessibility for Developers<br>
-          <a href="http://twitter.com/marcysutton" target="_blank" title="Link opens in a new window">@marcysutton</a> <span aria-hidden="true">/</span> <a href="http://marcysutton.com/OWC" target="_blank" title="Link opens in a new window">marcysutton.com/OWC</a></p>
+        <p class="copyright">Mobile Web Accessibility for Developers<br>
+          <a href="http://twitter.com/marcysutton" target="_blank" title="Link opens in a new window">@marcysutton</a> <span aria-hidden="true">/</span> <a href="http://marcysutton.com/owc" target="_blank" title="Link opens in a new window">marcysutton.com/owc</a></p>
       </footer>
 		</div>
 

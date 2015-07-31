@@ -273,7 +273,7 @@ body {
  * HEADERS
  *********************************************/
 .reveal {
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .h2-style {
     color: $headingColor;
   	font-family: $headingFont;
     font-weight: $headingFontWeight;
@@ -549,6 +549,16 @@ body {
       font-size: 0.75em;
       letter-spacing: 0;
     }
+    &.bulleted {
+      text-align: left;
+      list-style: disc;
+      max-width: 80%; 
+      margin: 0 auto;
+
+      li {
+        margin-bottom: 0.75em;
+      }
+    }
   }
 }
 /*********************************************
@@ -566,9 +576,9 @@ body {
   	     -o-transition: all .5s;
   	        transition: all .5s;
   }
-	// a:not(.image):hover, a:not(.image):focus {
- //    border: 2px dotted currentColor;
-	// }
+	a:not(.image):hover, a:not(.image):focus {
+    color: $tertiaryColor;
+	}
 
   .roll span:after {
   	color: $white;
@@ -717,7 +727,11 @@ body {
       text-shadow: none;
     }
     a {
-      color: $altLinkColor;
+      color: $backgroundColor;
+
+      &:hover, &:focus {
+        color: $altLinkColor;
+      }
     }
     .layeredFragments > div {
       background-color: $mainColor;
@@ -818,11 +832,13 @@ body {
       text-align: center; 
       width: 100%;
     }
-    img {
+    img, iframe {
       display: block;
       min-height: 500px;
       max-height: 600px;
       margin: 0 auto;
+    }
+    img {
       width: auto;
     }
   }
@@ -1055,7 +1071,7 @@ body {
     $circleWidth: .2em;
 
     &:after {
-      border: $circleWidth solid darken($tertiaryColor, 5%);
+      border: $circleWidth solid darken($tertiaryColor, 7%);
       border-top: none;
       border-radius: 1.5em 1em 2em 1.5em;
       bottom: -.3em;
@@ -1066,7 +1082,7 @@ body {
       top: -.1em;
     }
     &:before {
-      border-top: $circleWidth solid darken($tertiaryColor, 5%);
+      border-top: $circleWidth solid darken($tertiaryColor, 7%);
       border-radius: .5em;
       content: '';
       height: 1em;
@@ -1084,9 +1100,13 @@ body {
     margin-top: 8%;
 
     &.circled:before {
+      border-color: #ff3300;
       top: -.13em;
       transform: rotate(-1deg);
       width: 8.5em;
+    }
+    &.circled:after {
+      border-color: #ff3300;
     }
   }
 }
