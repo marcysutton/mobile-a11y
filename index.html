@@ -44,20 +44,9 @@
 			<div class="slides">
 
         <section>
-          <p class="h2-style">Mobile</p>
-          <figure>
-            <img src="img/awkward-poodle.jpg" style="display: inline-block; margin-right: 1em; vertical-align: middle" alt="Poodle holding iPad: Awkward Stock Photo">
-            <img src="img/awkward-ninjas.jpg" style="display: inline-block; vertical-align: middle" alt="Mobile device with ninjas: Awkward Stock Photo">
-            <figcaption><a href="http://awkwardstockphotos.com/archive">Awkward Stock Photos</a></figcaption>
-          </figure>
+          <p class="h3-style">Mobile</p>
+          <iframe width="960" height="720" src="https://www.youtube.com/embed/694TX2lQ7Uo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen title="Radio Shack Cell Phones - 1990"></iframe>
         </section>
-
-				<section>
-          <h1>Mobile Web Accessibility for Developers</h1>
-					<p>Marcy Sutton, Seattle, USA<br>
-          Accessibility Engineer at Adobe, Angular Core Team Member</p>
-					<p><a href="http://marcysutton.com/owc">http://marcysutton.com/owc</a></p>
-				</section>
 
         <section data-background="img/things-about-my-phone.png" data-background-size="contain" data-background-color="#fff">
           <div class="offscreen">
@@ -87,6 +76,13 @@
           <div class="fragment circled" id="work-correctly">
             <span class="offscreen">Work correctly</span>
           </div>
+        </section>
+
+        <section>
+          <h1>Mobile Web Accessibility for Developers</h1>
+          <p>Marcy Sutton, Seattle, USA<br>
+          Accessibility Engineer at Adobe, Angular Core Team Member</p>
+          <p><a href="http://marcysutton.com/owc">http://marcysutton.com/owc</a></p>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -134,11 +130,8 @@
         </section> -->
 
         <section data-background-color="#fff" class="light-theme">
-          <div class="left-align">
-            <p>April 28, 2015:</p>
-            <h3 class="h2-style" style="font-family: 'Roboto'">Number of mobile-only internet users now exceeds desktop-only in the U.S.</h3>
-            <p>Source: <a href="https://www.comscore.com/Insights/Blog/Number-of-Mobile-Only-Internet-Users-Now-Exceeds-Desktop-Only-in-the-U.S">Comscore</a></p>
-          </div>
+          <h2 class="h3-style" style="margin-bottom:0;">Mobile++</h2>
+          <img src="img/Mobile-stats-vs-desktop-users-global.jpg" alt="Number of mobile-only internet users now exceeds desktop-only in the U.S.">
           <aside class="notes">
             -In the US, time spent with mobile apps exceeds desktop web access
             -Smartphone penetration tops 75% of the US mobile market in Q4 2014
@@ -147,7 +140,7 @@
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h2 style="margin-bottom:0">Mobile Platform Usage</h2>
+          <h2 class="h3-style" style="margin-bottom:0">Mobile Platform Usage</h2>
           <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey</a></p>
           <a href="http://webaim.org/projects/screenreadersurvey5/#mobile" class="image">
             <img src="img/mobileplatformusage.png" class="plain" 
@@ -157,7 +150,7 @@
         </section>
 
         <section>
-          <h2>Let's talk about&hellip;</h2>
+          <h2>Let&rsquo;s talk about&hellip;</h2>
           <ul>
             <li>Barriers</li>
             <li>Contexts</li>
@@ -166,38 +159,36 @@
           </ul>
         </section>
 
-        <section>
-          <h2 class="h1-style">Barriers</h2>
+        <section data-background-image="img/cx-barriers-overlay.jpg">
+          <h2 class="giant">Barriers to Access</h2>
         </section>
 
         <section>
-          <h3 class="h4-style">Barriers</h3>
+          <h3 class="h4-style">Mobile Accessibility Barriers</h3>
           <div class="separator inset-width"></div>
           <ul>
             <li>Visual clutter</li>
-            <li>Everything's too SMALL</li>
-            <li>One-handed interactions</li>
-            <li>Mounted displays</li>
+            <li>Everything&rsquo;s too SMALL</li>
+            <li>Poor support for inverted colors</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="h4-style">More barriers</h3>
+          <h3 class="h4-style">More Accessibility Barriers</h3>
           <div class="separator inset-width"></div>
           <ul>
             <li>Ambiguous visual icons</li>
-            <li>Poor support for inverted colors</li>
             <li>Locked-down zoom</li>
             <li>Hijacked scrolling</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="h2-style">Spotty AT Support</h3>
-          <p>Mobile is less mature than desktop</p>
-          <aside class="notes">
-            AT = Assistive technology
-          </aside>
+          <h3 class="h2-style">Spotty AT<sup>*</sup> Support</h3>
+          <h4>Mobile is less mature than desktop</h4>
+          <p style="margin-top:5em; position:absolute;width:100%;font-style:italic;color:#999;"><small>
+            *AT = Assistive technology
+          </small></p>
         </section>
 
         <section data-background="img/android_fragmentation.png" class="light-theme">
@@ -332,15 +323,18 @@
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h3>Tenon.io</h3>
-          <p>Test mobile viewport</p>
-          <!-- add visual -->
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
           <p class="h4-style">What about...</p>
           <h3 class="h2-style">Automated testing of screen reader output?</h3>
           <p>Oh hai, Applescript</p>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Tenon.io</h3>
+          <img src="img/tenonio.png" alt="Tenon logo" class="plain">
+          <p><a href="http://tenon.io/documentation/understanding-request-parameters.php">Remote accessibility testing</a></p>
+          <p><code>viewPortWidth</code><br>
+          <code>viewPortHeight</code><br>
+          <code>uaString</code></p>
         </section>
 
         <!--<section data-background-color="#fff" class="light-theme">

@@ -148,8 +148,14 @@
  * GLOBAL STYLES
  *********************************************/
 
+html {
+  font-size: 62.5%;
+  line-height: 1.4; }
+
 body {
   background-color: $backgroundColor;
+  font-size: 1.6rem;
+  font-family: 'Roboto', Helvetica, sans-serif;
   // background-image: $backgroundImage;
   // background-repeat: repeat;
   // background-position: center top;
@@ -166,7 +172,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
   }
   code {
-    font-size: 110%;
+    font-family: $codeFont;
   }
 
   pre {
@@ -273,7 +279,7 @@ body {
  * HEADERS
  *********************************************/
 .reveal {
-  h1, h2, h3, h4, h5, h6, .h2-style {
+  h1, h2, h3, h4, h5, h6, .h2-style, .h3-style {
     color: $headingColor;
   	font-family: $headingFont;
     font-weight: $headingFontWeight;
@@ -439,7 +445,6 @@ body {
       }
       figcaption {
         color: $darkColor;
-        font-style: italic;
         font-size: 0.75em;
         margin: 0;
         padding: 0.2em 0 0.75em;

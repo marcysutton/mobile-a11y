@@ -133,8 +133,14 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
+html {
+  font-size: 62.5%;
+  line-height: 1.4; }
+
 body {
-  background-color: #333; }
+  background-color: #333;
+  font-size: 1.6rem;
+  font-family: 'Roboto', Helvetica, sans-serif; }
 
 .reveal {
   background-color: rgba(0, 0, 0, 0.6);
@@ -144,7 +150,7 @@ body {
   .reveal iframe {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75); }
   .reveal code {
-    font-size: 110%; }
+    font-family: Menlo, monospace; }
   .reveal pre {
     background-color: black;
     display: block;
@@ -225,7 +231,7 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal .h2-style {
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal .h2-style, .reveal .h3-style, .reveal table caption {
   color: #fff;
   font-family: "Rokkitt", serif;
   font-weight: 700;
@@ -365,7 +371,6 @@ body {
     position: absolute; }
   .reveal section figure figcaption {
     color: #333;
-    font-style: italic;
     font-size: 0.75em;
     margin: 0;
     padding: 0.2em 0 0.75em;
