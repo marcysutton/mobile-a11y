@@ -1107,20 +1107,4 @@ body {
       width: 5em;
     }
   }
-  #work-correctly {
-    width: 22%;
-    height: 60px;
-    margin-left: 65%;
-    margin-top: 8%;
-
-    &.circled:before {
-      border-color: #ff3300;
-      top: -.13em;
-      transform: rotate(-1deg);
-      width: 8.5em;
-    }
-    &.circled:after {
-      border-color: #ff3300;
-    }
-  }
 }

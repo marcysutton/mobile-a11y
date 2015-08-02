@@ -891,16 +891,3 @@ body {
     top: -.2em;
     transform: rotate(-1deg);
     width: 5em; }
-
-.reveal #work-correctly {
-  width: 22%;
-  height: 60px;
-  margin-left: 65%;
-  margin-top: 8%; }
-  .reveal #work-correctly.circled:before {
-    border-color: #ff3300;
-    top: -.13em;
-    transform: rotate(-1deg);
-    width: 8.5em; }
-  .reveal #work-correctly.circled:after {
-    border-color: #ff3300; }
