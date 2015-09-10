@@ -87,8 +87,8 @@
           <h1>Mobile Web Accessibility for Developers</h1>
           <p>Marcy Sutton, Seattle, USA<br>
           Accessibility Engineer at Adobe, Angular Core Team Member</p>
-          <p><a href="http://marcysutton.com/owc">http://marcysutton.com/owc</a></p>
-        </section>
+					<p><a href="http://marcysutton.com/mobile-a11y">http://marcysutton.com/mobile-a11y</a></p>
+				</section>
 
         <section data-background-color="#fff" class="light-theme">
           <h2 class="h3-style" id="mobileDesktopQuestion">Do you use a mobile screen reader more than a desktop screen reader?</h2>
@@ -149,7 +149,7 @@
           <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey</a></p>
           <a href="http://webaim.org/projects/screenreadersurvey5/#mobile" class="image">
             <img src="img/mobileplatformusage.png" class="plain" 
-               style="min-height: 500px;"
+               style="min-height: 480px;"
                alt="iOS device usage among screen reader users is notably higher than for the standard population, whereas Android usage is much, much lower. Those with more advanced screen reader and internet proficiency were much more likely to use iOS over Android or Nokia.">
           </a>
         </section>
@@ -222,7 +222,7 @@
           </ul>
         </section>
 
-        <section class="light-theme" data-background-color="#fff">
+        <!--<section class="light-theme" data-background-color="#fff">
           <h3 style="font-size: 3em">iOS Accessibility<br>Features</h3>
           <ul>
             <li>Voiceover</li>
@@ -248,28 +248,15 @@
             https://support.google.com/accessibility/android/answer/6006564?hl=en
           </aside>
         </section>
-
+      -->
         <section>
           <h3 class="h2-style">Accessibility is easier to get right on native platforms.</h3>
+          <div class="large-tag" style="font-family: serif">¯\_(ツ)_/¯</div>
         </section>
 
-        <section>
-          <h3 class="h2-style">But we&rsquo;re web developers!</h3>
-          <h4>What to do?</h4>
-          <aside class="notes">
-          I refuse to concede to native or even hybrid for accessibility. By focusing on mobile web, we can make it better.
-          </aside>
-        </section>
-
-        <section>
-          <h3 class="h2-style">Focus on making it better.</h3>
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <h3 class="">BBC Mobile Accessibility Guidelines</h3>
-          <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/developers" style="display: block;"> 
-            <img src="img/BBC-mobile-a11y-guidelines.png" alt="BBC Mobile Accessibility Guidelines for Developers" class="" style="max-width: 90%;">
-          </a>
+        <section data-background-color="#fff" data-background-image="img/come-at-me-bro.gif" class="light-theme">
+          <h3 class="offscreen">Mobile Web Accessibility: Come at me Bro</h3>
+          <!--<img src="img/come-at-me-bro.gif" alt="GIF of Penguin with arms open running toward camera">-->
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -342,14 +329,20 @@
           <code>uaString</code></p>
         </section>
 
-        <!--<section data-background-color="#fff" class="light-theme">
-          <p class="h4-style">What about...</p>
-          <h3 class="h2-style">Exposing native test platforms to mobile web<sup>*</sup></h3>
-          <p><sup>*</sup>Just an idea</p>
-        </section>-->
-
         <section>
           <h2 class="h1-style">Mobile UI Patterns</h2>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>You&rsquo;re competing&hellip;</h3>
+          <img src="img/iOS-Reader.png" alt="with the mobile browser's Reader function">
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3 class="">BBC Mobile Accessibility Guidelines</h3>
+          <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/developers" style="display: block;"> 
+            <img src="img/BBC-mobile-a11y-guidelines.png" alt="BBC Mobile Accessibility Guidelines for Developers" class="" style="max-width: 90%;">
+          </a>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -384,36 +377,17 @@
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h3 style="line-height:0.8;">Web-App Layouts &amp; Scrolling</h3>
-          <p style="margin-top:0;margin-bottom:0.5em;">Test on actual devices and AT</p>
-          <figure>
-            <img src="img/ios-style-sliding-menu.png" alt="" style="max-width: 90%">
-          </figure>
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <h3 class="h4-style">&ldquo;Page 1 of 1...&rdquo;</h3>
-          <img src="img/angular-material-mobile-1.png" alt="" style="margin-right: 2em;">
-          <img src="img/angular-material-mobile-2.png" alt="">
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <h3>Scrolling bug in iOS with Voiceover:<br>Resolved fixed!</h3>
-          <p><a href="https://bugs.webkit.org/show_bug.cgi?id=141893">https://bugs.webkit.org/show_bug.cgi?id=141893</a></p>
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <h3 class="h4-style" style="margin-bottom:0; line-height:0.8;">Mobile Tab Order Swipe: Before</h3>
+          <h3 class="h4-style" style="margin-bottom:0; line-height:0.8;">Reachable tabindex on mobile (yikes)</h3>
           <figure style="margin-top:0;">
-            <figcaption style="margin-top:0;">Angular Material Dialog</figcaption>
+            <figcaption style="margin-top:0;">Angular Material Dialog: Before</figcaption>
               <iframe width="1090" height="610" src="https://www.youtube.com/embed/PRzmjKLWxGE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen title="Angular Material Dialog: Before"></iframe>
           </figure>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h3 class="h4-style" style="margin-bottom:0; line-height:0.8;">Mobile Tab Order Swipe: After</h3>
+          <h3 class="h4-style" style="margin-bottom:0; line-height:0.8;">Disabled tabindex on mobile (yay)</h3>
           <figure style="margin-top:0;">
-            <figcaption style="margin-top:0;">Angular Material Dialog</figcaption>
+            <figcaption style="margin-top:0;">Angular Material Dialog: After</figcaption>
               <iframe width="1090" height="610" src="https://www.youtube.com/embed/CJ0Agr0Rx10?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen title="Angular Material Dialog: After"></iframe>
           </figure>
         </section>
@@ -428,7 +402,8 @@
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h3>Inert: disabling the background</h3>
+          <h3 style="margin-bottom:0;">Inert: disabling the background</h3>
+          <p>Using <code>aria-hidden</code></p>
           <figure>
             <pre><code class="javascript">
   function walkDOM(element) {
@@ -451,6 +426,33 @@
           </figure>
         </section>
 
+        <section data-background-color="#fff" class="light-theme">
+          <h3 style="margin-bottom:0;">Trapping tabindex</h3>
+          <figure>
+            <pre><code class="javascript">
+  var focusable = ['a', 'button', 'input', '[tabindex]'...
+  var firstFocusable = focusable[0],
+      lastFocusable = focusable[focusable.length -1];
+
+  overlay.on('keydown', function(e) {
+    if ( e.keyCode === 9) {
+      var shiftKeyPressed = !!(e.shiftKey);
+      if ( shiftKeyPressed ) {
+        if ( e.target === firstFocusable ) {
+          lastFocusable.focus();
+        }
+      }
+      else {
+        if ( e.target === lastFocusable ) {
+          firstFocusable.focus();
+        }
+      }
+    }
+  });
+            </code></pre>
+          </figure>
+        </section>
+<!--
         <section data-background-color="#fff" class="light-theme">
           <h3>HTML5 Dialog</h3>
           <div class="large-tag">
@@ -492,7 +494,7 @@
             -Role is only exposed in Chrome Canary
           </aside>
         </section>
-
+-->
         <section data-background-color="#fff" class="light-theme">
           <h3>Responsive Tabs to Accordion</h3>
           <figure>
@@ -521,6 +523,7 @@
             <li class="fragment">Use semantics</li>
             <li class="fragment">Craft source &amp; tab order</li>
             <li class="fragment">Make UI components respond</li>
+            <li class="fragment">Simplify!</li>
           </ul>
         </section>
 
@@ -532,7 +535,7 @@
           <h2>Resources</h2>
           <p class="offscreen"><em>All links open in new windows</em></p>
           <ul class="bulleted">
-            <li><a href="http://www.iheni.com/mobile-accessibility-guidelines/">Mobile Accessibility - Henny Swan</a></li>
+            <li><a href="http://www.iheni.com/mobile-accessibility-guidelines/">Mobile Accessibility - Henny Magro</a></li>
             <li><a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/developers">BBC Mobile Accessibility Guidelines</a></li>
             <li><a href="http://www.w3.org/WAI/mobile/">W3C-WAI on Mobile</a></li>
             <li><a href="http://webaim.org/projects/screenreadersurvey5/">WebAIM Screen Reader Survey</a></li>
@@ -547,7 +550,7 @@
 
 			<footer>
         <p class="copyright">Mobile Web Accessibility for Developers<br>
-          <a href="http://twitter.com/marcysutton" target="_blank" title="Link opens in a new window">@marcysutton</a> <span aria-hidden="true">/</span> <a href="http://marcysutton.com/owc" target="_blank" title="Link opens in a new window">marcysutton.com/owc</a></p>
+          <a href="http://twitter.com/marcysutton" target="_blank" title="Link opens in a new window">@marcysutton</a> <span aria-hidden="true">/</span> <a href="http://marcysutton.com/mobile-a11y" target="_blank" title="Link opens in a new window">marcysutton.com/mobile-a11y</a></p>
       </footer>
 		</div>
 
