@@ -8,6 +8,7 @@ twitter: [@marcysutton](http://twitter.com/marcysutton)
 ##Presented at:
 * Open Web Camp 2015
 * Seattle JS
+* Responsive Field Day
 
 ## Installation
 
