@@ -44,8 +44,10 @@
 			<div class="slides">
 
         <section>
-          <p class="h3-style">Mobile</p>
-          <iframe width="960" height="720" src="https://www.youtube.com/embed/694TX2lQ7Uo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen title="Radio Shack Cell Phones - 1990"></iframe>
+          <p class="h3-style">Mobile Phones!</p>
+          <figure>
+            <img src="img/motorola-dynatac.jpg" style="min-height: 600px;" alt="Motorola Vice President John F. Mitchell shows off the DynaTAC portable radio telephone in New York City in 1973.">
+          </figure>
         </section>
 
         <section data-background-color="#fff">
@@ -93,7 +95,7 @@
         <section data-background-color="#fff" class="light-theme">
           <h2 class="h3-style" id="mobileDesktopQuestion">Do you use a mobile screen reader more than a desktop screen reader?</h2>
 
-          <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey</a></p>
+          <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey 5</a></p>
 
           <a href="http://webaim.org/projects/screenreadersurvey5/#mobile"><img src="img/webaim-mobile-desktop-chart.png" alt="WebAIM Chart showing mobile vs. desktop/laptop usage" class="plain" style="max-height: 400px;"></a>
           
@@ -122,18 +124,6 @@
           </tbody></table>
         </section>
 
-        <!-- <section data-background-color="#fff" class="light-theme">
-          <h2 style="position: relative;">But...mobile</h2>
-          <img src="img/Mobile-stats-vs-desktop-users-global.jpg" 
-               alt="Time with mobile apps overtaking desktop web in 2014" 
-               class="plain" 
-               style="margin-top:-1.5em; margin-left:-2em;">
-          <aside class="notes">
-            -In the US, time spent with mobile apps exceeds desktop web access
-            -Smartphone penetration tops 75% of the US mobile market in Q4 2014
-          </aside>
-        </section> -->
-
         <section data-background-color="#fff" class="light-theme">
           <h2 class="h3-style" style="margin-bottom:0;">Mobile++</h2>
           <img src="img/Mobile-stats-vs-desktop-users-global.jpg" alt="Number of mobile-only internet users now exceeds desktop-only in the U.S.">
@@ -146,7 +136,7 @@
 
         <section data-background-color="#fff" class="light-theme">
           <h2 class="h3-style" style="margin-bottom:0">Mobile Platform Usage</h2>
-          <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey</a></p>
+          <p><a href="http://webaim.org/projects/screenreadersurvey5/#mobile">WebAIM Screen Reader Survey 6</a></p>
           <a href="http://webaim.org/projects/screenreadersurvey5/#mobile" class="image">
             <img src="img/mobileplatformusage.png" class="plain" 
                style="min-height: 480px;"
@@ -158,9 +148,9 @@
           <h3 style="font-size: 3em">iOS Accessibility<br>Features</h3>
           <ul>
             <li>Voiceover</li>
-            <li>Siri</li>
+            <li>Dictation</li>
             <li>Zoom</li>
-            <li>Invert colors</li>
+            <li>Invert colors/grayscale</li>
             <li>Switch control</li>
           </ul>
           <aside class="notes">
@@ -175,6 +165,7 @@
             <li>Switch access</li>
             <li>Braille support</li>
             <li>High contrast</li>
+            <li>Magnification</li>
           </ul>
           <aside class="notes">
             https://support.google.com/accessibility/android/answer/6006564?hl=en
@@ -182,35 +173,35 @@
         </section>
 
         <section>
-          <h2>Let&rsquo;s talk about&hellip;</h2>
+          <h2>Let&rsquo;s talk about:</h2>
+          <div class="separator inset-width"></div>
           <ul>
             <li>Barriers</li>
-            <li>Contexts</li>
-            <li>Debugging</li>
+            <li>State of Tooling</li>
             <li>UI Patterns</li>
           </ul>
         </section>
 
-        <section data-background-image="img/cx-barriers-overlay.jpg">
-          <h2 class="giant">Barriers to Access</h2>
+        <section data-background-image="img/guide-3.gif">
+          <h2 class="giant" style="background-color:rgba(0,0,0,0.8); display: inline-block; font-size: 4.5em">Barriers<br>to Access</h2>
         </section>
 
         <section>
-          <h3 class="h4-style">Mobile Accessibility Barriers</h3>
+          <h3>Accessibility Barriers</h3>
           <div class="separator inset-width"></div>
           <ul>
             <li>Visual clutter</li>
-            <li>Everything&rsquo;s too SMALL</li>
-            <li>Poor support for inverted colors</li>
+            <li>Everything&rsquo;s too <small style="text-transform: uppercase; font-size: 60%;">small</small></li>
+            <li>Ambiguous visual icons</li>
           </ul>
         </section>
 
         <section>
-          <h3 class="h4-style">More Accessibility Barriers</h3>
+          <h3>Accessibility Barriers (moar)</h3>
           <div class="separator inset-width"></div>
           <ul>
-            <li>Ambiguous visual icons</li>
             <li>Locked-down zoom</li>
+            <li>Conflicting gestures</li>
             <li>Hijacked scrolling</li>
           </ul>
         </section>
@@ -218,14 +209,13 @@
         <section>
           <h3 class="h2-style">Spotty AT<sup>*</sup> Support</h3>
           <h4>Mobile is less mature than desktop</h4>
-          <p style="margin-top:5em; position:absolute;width:100%;font-style:italic;color:#999;"><small>
+          <p style="margin-top:5em; position:absolute;width:100%;font-style:italic;color:#ccc;"><small>
             *AT = Assistive technology
           </small></p>
         </section>
 
         <section data-background="img/android_fragmentation.png" class="light-theme">
           <h3 class="giant">Fragmentation</h3>
-          
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -256,11 +246,10 @@
 
         <section data-background-color="#fff" data-background-image="img/come-at-me-bro.gif" class="light-theme">
           <h3 class="offscreen">Mobile Web Accessibility: Come at me Bro</h3>
-          <!--<img src="img/come-at-me-bro.gif" alt="GIF of Penguin with arms open running toward camera">-->
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h2>Mobile browser debugging</h2>
+          <h2 class="h1-style">State of Tooling</h2>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -299,26 +288,6 @@
           <h4 class="h2-style">We&rsquo;re in desperate need of better mobile web accessibility testing tools.</h4>
         </section>
 
-        <section data-background-color="#fff" class="light-theme">
-          <p class="h4-style">What about...</p>
-          <h3 class="h2-style">Accessibility Developer Tools in Safari?</h3>
-          <p>Extension plz</p>
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <p class="h4-style">What about...</p>
-          <h3 class="h2-style">Automating actual mobile browsers?</h3>
-          <p>Oh hai, Selenium WebDriver (<a href="http://selendroid.io/mobileWeb.html">Android</a> or <a href="https://ios-driver.github.io/ios-driver/">iOS</a>).</p>
-          <aside class="notes">
-            <p>Only helps by putting mobile more into our process, accessibility still could be left behind.</p>
-          </aside>
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <p class="h4-style">What about...</p>
-          <h3 class="h2-style">Automated testing of screen reader output?</h3>
-          <p>Oh hai, Applescript</p>
-        </section>
 
         <section data-background-color="#fff" class="light-theme">
           <h3>Tenon.io</h3>
@@ -348,11 +317,11 @@
         <section data-background-color="#fff" class="light-theme">
           <h3>Touch targets</h3>
           <figure style="padding-right: 6%; display:inline-block;">
-            <figcaption class="larger">Don't: too small</figcaption>
+            <figcaption class="larger">Don&rsquo;t: <strong>too small</strong></figcaption>
             <img src="img/creativebloq.png" alt="Small touch target size on Creative Bloq, ironically showing Top 10 Mobile design mistakes - and how to avoid them" style="max-height:700px;">
           </figure>
           <figure style="display:inline-block;">
-            <figcaption class="larger">Do: generous padding</figcaption>
+            <figcaption class="larger">Do: <strong>generous padding</strong>=</figcaption>
             <img src="img/simplyaccessible-mobile.png" alt="Mobile menu button goes full width on SimplyAccessible.com" style="max-height:700px">
           </figure>
           <aside class="notes">
@@ -364,7 +333,7 @@
           <h3>Use buttons*</h3>
           <figure>
             <img src="img/cnn-divbutton.png" alt="CNN doesn't know how" style="max-width: 90%; margin-bottom:0.5em;">
-            <figcaption class="larger">*Use semantic elements</figcaption>
+            <figcaption class="larger">*And other semantic elements</figcaption>
           </figure>
         </section>
 
@@ -392,109 +361,29 @@
           </figure>
         </section>
 
+        <section class="light-theme" data-background-color="#fff">
+          <h3>How to disable offscreen content</h3>
+          <div class="large-tag inset-width" style="margin-top:0.5em;">
+          <pre><code class="css"> display: none;</code></pre>
+          </div>
+        </section>
+
         <section data-background-color="#fff" class="light-theme">
-          <h3>Modal dialogs must:</h3>
+          <h3>Disabling with CSS</h3>
           <ul>
-            <li>Use semantics</li>
-            <li>Trap focus</li>
-            <li>Disable background</li>
+            <li><code>visibility: hidden</code></li>
           </ul>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h3 style="margin-bottom:0;">Inert: disabling the background</h3>
-          <p>Using <code>aria-hidden</code></p>
-          <figure>
-            <pre><code class="javascript">
-  function walkDOM(element) {
-    while (element.parentNode) {
-      if (element === document.body) {
-        return;
-      }
-      var children = element.parentNode.children;
-      for (var i = 0; i < children.length; i++) {
-        // skip over child if it is an ascendant of the dialog
-        if (element !== children[i]) {
-          children[i].setAttribute('aria-hidden', isHidden);
-        }
-      }
-      walkDOM(element = element.parentNode);
-    }
-  }
-            </code></pre>
-            <figcaption><a href="https://github.com/angular/material/blob/master/src/components/dialog/dialogL686">Angular Material Dialog</a></figcaption>
-          </figure>
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <h3 style="margin-bottom:0;">Trapping tabindex</h3>
-          <figure>
-            <pre><code class="javascript">
-  var focusable = ['a', 'button', 'input', '[tabindex]'...
-  var firstFocusable = focusable[0],
-      lastFocusable = focusable[focusable.length -1];
-
-  overlay.on('keydown', function(e) {
-    if ( e.keyCode === 9) {
-      var shiftKeyPressed = !!(e.shiftKey);
-      if ( shiftKeyPressed ) {
-        if ( e.target === firstFocusable ) {
-          lastFocusable.focus();
-        }
-      }
-      else {
-        if ( e.target === lastFocusable ) {
-          firstFocusable.focus();
-        }
-      }
-    }
-  });
-            </code></pre>
-          </figure>
-        </section>
-<!--
-        <section data-background-color="#fff" class="light-theme">
-          <h3>HTML5 Dialog</h3>
-          <div class="large-tag">
-            <pre><code class="html">
-  <dialog open>
-    <p>Greetings, one and all!</p>
-  </dialog>
-            </code></pre>
-          </div>
-        </section>
-
-        <section data-background-color="#3F3729" data-background-image="img/caniuse-dialog.png" data-background-size="contain">
-          <div class="offscreen">
-            <h3><a href="http://caniuse.com/#feat=dialog">Can I use the HTML5 dialog element?</a></h3>
-            <p>Only supported in Chrome and Opera</p>
-          </div>
-        </section>
-
-        <section data-background-color="whitesmoke" data-background-image="img/dialog-polyfill.png" data-background-size="contain">
-          <div class="offscreen">
-            <h3><a href="https://github.com/GoogleChrome/dialog-polyfill">Google Chrome Dialog Polyfill</a></h3>
-          </div>
-          <div style="position: absolute; min-height: 1000px; top: -400px; width:100%;">
-            <img src="img/tada.png" alt="" class="plain" style="position: absolute; left: -4%; top:2%">
-            <img src="img/tada.png" alt="" class="plain flip" style="position: absolute; right: 0; bottom: 50%;">
-            <img src="img/tada.png" alt="" class="plain" style="position: absolute; left: -1%; bottom:10%">
-          </div>
-        </section>
-
-        <section data-background-color="#fff" class="light-theme">
-          <h3 class="h2-style">Are we there yet?</h3>
-          <ul class="flexlist">
-            <li>Enclose interaction <span class="fragment thumbsup"></span></li>
-            <li>Focus management <span class="fragment"><span class="thumbsup"></span><span class="crossed-out err"></span></span></li>
-            <li>Semantics <span class="fragment"><span class="thumbsup"></span><span class="crossed-out err"></span></span></li>
+          <h4 style="margin-top: 1em;">Disabling with HTML</h4>
+          <ul>
+            <li><code>aria-hidden="true"</code></li>
+            <li><code>tabindex="-1"</code></li>
+            <li><code><a href="http://tjvantoll.com/2013/01/09/html5-hidden-attribute-browser-support/">hidden</a></code></li>
           </ul>
-          <aside class="notes">
-            -Focus mgmt: focus is dropped on close
-            -Role is only exposed in Chrome Canary
-          </aside>
         </section>
--->
+
         <section data-background-color="#fff" class="light-theme">
           <h3>Responsive Tabs to Accordion</h3>
           <figure>

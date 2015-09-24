@@ -275,6 +275,9 @@ body {
   font-size: 6em;
   text-shadow: 4px 4px 8px #000 !important; }
 
+.reveal strong {
+  font-weight: bold; }
+
 .reveal small {
   font-size: 0.85em;
   letter-spacing: 0;
@@ -403,8 +406,7 @@ body {
 .reveal .large-tag, .reveal .larger-tag {
   color: #ecff05;
   font-family: Menlo, monospace;
-  font-size: 1.5em;
-  margin-top: 0.5em; }
+  font-size: 2.5em; }
   .reveal .large-tag pre code, .reveal .larger-tag pre code {
     font-size: 2em; }
 
@@ -444,6 +446,10 @@ body {
   .reveal ul.normal-list li {
     letter-spacing: 0;
     margin-bottom: 0.25em; }
+  .reveal ul.bigger {
+    font-size: 2.75em; }
+    .reveal ul.bigger li {
+      margin-bottom: 0.5em; }
   .reveal ul.smaller {
     font-size: 1.75em; }
     .reveal ul.smaller li {
