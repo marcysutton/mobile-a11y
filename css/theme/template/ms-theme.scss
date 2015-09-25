@@ -766,11 +766,11 @@ body {
  *********************************************/
 
 .reveal .progress {
-	background: transparentize($headingColor, 0.5);
+	background: transparentize($backgroundColor, 0.75);
   height: 10px;
 }
 	.reveal .progress span {
-		background: $headingColor;
+		background: $highlightColor;
 
 		-webkit-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 		   -moz-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
