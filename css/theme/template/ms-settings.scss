@@ -43,6 +43,12 @@ $buttonTextColor: $white;
 $separatorColor: $mainColor;
 $separatorHeight: 3px;
 
+$progressBGColor: transparentize($backgroundColor, 0.75);
+$progressFGColor: $highlightColor;
+
+$navigationButtonColor: $linkColor;
+$navigationHoverColor: $linkColorHover;
+
 // Text selection
 $selectionBackgroundColor: #97948f;
 $selectionColor: $white;

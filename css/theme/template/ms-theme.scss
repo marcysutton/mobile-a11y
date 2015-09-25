@@ -670,40 +670,40 @@ body {
 .reveal .controls {
   bottom: 30px;
 }
-.reveal .controls div.navigate-left,
-.reveal .controls div.navigate-left.enabled {
-	border-right-color: $linkColor;
+.reveal .controls button.navigate-left,
+.reveal .controls button.navigate-left.enabled {
+	border-right-color: $navigationButtonColor;
 }
 
-.reveal .controls div.navigate-right,
-.reveal .controls div.navigate-right.enabled {
-	border-left-color: $linkColor;
+.reveal .controls button.navigate-right,
+.reveal .controls button.navigate-right.enabled {
+	border-left-color: $navigationButtonColor;
 }
 
-.reveal .controls div.navigate-up,
-.reveal .controls div.navigate-up.enabled {
-	border-bottom-color: $linkColor;
+.reveal .controls button.navigate-up,
+.reveal .controls button.navigate-up.enabled {
+	border-bottom-color: $navigationButtonColor;
 }
 
-.reveal .controls div.navigate-down,
-.reveal .controls div.navigate-down.enabled {
-	border-top-color: $linkColor;
+.reveal .controls button.navigate-down,
+.reveal .controls button.navigate-down.enabled {
+	border-top-color: $navigationButtonColor;
 }
 
-.reveal .controls div.navigate-left.enabled:hover {
-	border-right-color: $linkColorHover;
+.reveal .controls button.navigate-left.enabled:hover {
+	border-right-color: $navigationHoverColor;
 }
 
-.reveal .controls div.navigate-right.enabled:hover {
-	border-left-color: $linkColorHover;
+.reveal .controls button.navigate-right.enabled:hover {
+	border-left-color: $navigationHoverColor;
 }
 
-.reveal .controls div.navigate-up.enabled:hover {
-	border-bottom-color: $linkColorHover;
+.reveal .controls button.navigate-up.enabled:hover {
+	border-bottom-color: $navigationHoverColor;
 }
 
-.reveal .controls div.navigate-down.enabled:hover {
-	border-top-color: $linkColorHover;
+.reveal .controls button.navigate-down.enabled:hover {
+	border-top-color: $navigationHoverColor;
 }
 
 /*********************************************
@@ -766,11 +766,11 @@ body {
  *********************************************/
 
 .reveal .progress {
-	background: transparentize($backgroundColor, 0.75);
+	background: $progressBGColor;
   height: 10px;
 }
 	.reveal .progress span {
-		background: $highlightColor;
+		background: $progressFGColor;
 
 		-webkit-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 		   -moz-transition: width 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
