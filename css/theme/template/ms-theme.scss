@@ -846,7 +846,7 @@ body {
     z-index: 1;
   }
   .layeredFragments {
-    min-height: 700px;
+    min-height: 600px;
     position: relative;
 
     &> div {
@@ -857,8 +857,8 @@ body {
     }
     img, iframe {
       display: block;
-      min-height: 600px;
-      max-height: 700px;
+      min-height: 500px;
+      max-height: 600px;
       margin: 0 auto;
     }
     img {
