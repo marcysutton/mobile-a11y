@@ -1,4 +1,4 @@
-#Mobile Web Accessibility for Developers
+#How to Win at Mobile Web Accessibility
 [http://marcysutton.github.io/mobile-a11y/](http://marcysutton.github.io/mobile-a11y/)
 
 By [Marcy Sutton](http://marcysutton.com)<br>
@@ -9,6 +9,8 @@ twitter: [@marcysutton](http://twitter.com/marcysutton)
 * Open Web Camp 2015
 * Seattle JS
 * Responsive Field Day
+* Beyond Tellerrand
+* ffconf
 
 ## Installation
 

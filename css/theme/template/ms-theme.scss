@@ -150,12 +150,13 @@
 
 html {
   font-size: 62.5%;
-  line-height: 1.4; }
+  line-height: 1.75; 
+}
 
 body {
   background-color: $backgroundColor;
   font-size: 1.6rem;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: $mainFont;
   // background-image: $backgroundImage;
   // background-repeat: repeat;
   // background-position: center top;
@@ -283,18 +284,19 @@ body {
     color: $headingColor;
   	font-family: $headingFont;
     font-weight: $headingFontWeight;
-    line-height: 1;
+    line-height: 1.15;
   	letter-spacing: $headingLetterSpacing;
     margin: $headingMargin;
   	text-transform: $headingTextTransform;
     text-shadow: $headingTextShadow;
   }
-  p, small, ul, ol, div.large-tag, figcaption, blockquote, dd, dt {
+  p, small, ul, ol, figcaption, blockquote, dd, dt {
+    font-size: 4.5rem;
     text-shadow: $paragraphTextShadow;
     line-height: 1.5;
   }
   h1, h2.h1-style, h3.h1-style, h4.h1-style {
-    font-size: 4.5em;
+    font-size: 4em;
   }
   h2,
   h1.h2-style,
@@ -498,7 +500,7 @@ body {
   }
   .larger-tag {
     @extend .large-tag;
-    font-size: 2.25em;
+    font-size: 5.25em;
   }
   .muted {
     color: $mutedColor;
@@ -1088,6 +1090,7 @@ body {
     width: 70%;
   }
   .circled {
+    opacity: .8;
     position: absolute;
     left: 0;
 
@@ -1113,7 +1116,17 @@ body {
       position: absolute;
       top: -.2em;
       transform: rotate(-1deg);
-      width: 5em;
+    }
+
+    &.hybrid {
+      &:before {
+        width: 3.25em;
+      }
+    }
+    &.mobileweb {
+      &:before {
+        width: 5.5em;
+      }
     }
   }
 }

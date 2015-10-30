@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Mobile Web Accessibility for Developers</title>
+		<title>How to Win at Mobile Web Accessibility</title>
 
-		<meta name="description" content="Mobile Web Accessibility for Developers">
+		<meta name="description" content="How to Win at Mobile Web Accessibility">
 
 		<meta name="author" content="Marcy Sutton">
 
@@ -17,7 +17,7 @@
 
     <link rel="icon" type="image/x-icon" href="http://marcysutton.github.io/mobile-a11y/favicon.ico" />
 
-		<link href='http://fonts.googleapis.com/css?family=Rokkitt:700|Roboto:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Istok+Web|Lora' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 
@@ -86,7 +86,7 @@
         </section>
 
         <section>
-          <h1>Mobile Web Accessibility for Developers</h1>
+          <h1>How to Win at Mobile Web Accessibility</h1>
           <p>By Marcy Sutton<br>
           Accessibility Engineer at Adobe</p>
 					<p><a href="http://marcysutton.github.io/mobile-a11y">http://marcysutton.github.io/mobile-a11y</a></p>
@@ -124,7 +124,7 @@
           </tbody></table>
         </section>
 
-        <section data-background-color="#fff" class="light-theme">
+        <!-- <section data-background-color="#fff" class="light-theme">
           <h2 class="h3-style" style="margin-bottom:0;">Mobile++</h2>
           <img src="img/Mobile-stats-vs-desktop-users-global.jpg" alt="Number of mobile-only internet users now exceeds desktop-only in the U.S.">
           <aside class="notes">
@@ -132,6 +132,9 @@
             -Smartphone penetration tops 75% of the US mobile market in Q4 2014
             -Very high usage in developing countries
           </aside>
+        </section> -->
+
+        <section data-background-image="img/migrants-mobile-phones.png" data-background-size="auto 99%" data-background-color="#fff">
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -142,10 +145,13 @@
                style="min-height: 480px;"
                alt="iOS device usage among screen reader users is notably higher than for the standard population, whereas Android usage is much, much lower. Those with more advanced screen reader and internet proficiency were much more likely to use iOS over Android or Nokia. Those without disabilities were more than twice as likely to use Android as those with disabilities.">
           </a>
+          <aside class="notes">
+            <p>How global are those numbers?</p>
+          </aside>
         </section>
         
         <section class="light-theme" data-background-color="#fff">
-          <h3 style="font-size: 3em">iOS Accessibility<br>Features</h3>
+          <h3>iOS Accessibility Features</h3>
           <ul>
             <li>Voiceover</li>
             <li>Dictation</li>
@@ -159,7 +165,7 @@
         </section>
 
         <section class="light-theme" data-background-color="#fff">
-          <h3 style="font-size: 3em">Android Accessibility<br>Features</h3>
+          <h3>Android Accessibility Features</h3>
           <ul>
             <li>TalkBack</li>
             <li>Switch access</li>
@@ -187,16 +193,27 @@
         </section>
 
         <section>
-          <h3>Hurting your users</h3>
-          <div class="separator inset-width"></div>
-          <ul>
-            <li>Visual clutter</li>
-            <li>Everything&rsquo;s too <small style="text-transform: uppercase; font-size: 60%;">small</small></li>
-            <li>Ambiguous visual icons</li>
-            <li>Locked-down zoom</li>
-            <li>Hijacked scrolling</li>
-            <li>Conflicting gestures</li>
-          </ul>
+          <h3>Visual clutter</h3>
+        </section>
+        
+        <section>
+          <h3>Everything&rsquo;s too <small style="text-transform: uppercase; font-size: 60%;">small</small></h3>
+        </section>
+
+        <section>
+          <h3>Ambiguous visual icons</h3>
+        </section>
+
+        <section>
+          <h3>Locked-down zoom</h3>
+        </section>
+        
+        <section>
+          <h3>Hijacked scrolling</h3>
+        </section>
+
+        <section>
+          <h3>Conflicting gestures</h3>
         </section>
 
         <section>
@@ -214,19 +231,69 @@
         <section data-background-color="#fff" class="light-theme">
           <figure>
             <img src="img/brad-frost-devices.jpg" alt="Brad Frost, Device Fatigue">
-            <figcaption><a href="http://bradfrost.com/blog/post/device-fatigue">http://bradfrost.com/blog/post/device-fatigue/</a></figcaption>
+            <figcaption><a href="http://bradfrost.com/blog/post/device-fatigue">Brad Frost - Device Fatigue</a></figcaption>
           </figure>
         </section>
 
         <section>
-          <h3 class="h2-style">Mobile Contexts</h3>
+          <h2>Mobile Contexts</h2>
+          <ul>
+            <li>Native</li>
+            <li>
+              <span style="position: relative">
+              <span class="offscreen">Current section</span>
+              Hybrid
+              <span class="circled hybrid" aria-hidden="true">Hybrid</span>
+              </span>
+            </li>
+            <li>Mobile web</li>
+          </ul>
+        </section>
+        
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Hybrid Mobile Apps</h3>
+          <ul>
+            <li>Code using web technologies</li>
+            <li>Publish native mobile apps</li>
+            <li>An interesting accessibility space</li>
+          </ul>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Demo: ionic</h3>
+          <aside class="notes">
+            Tech to mention: Cordova, React Native
+          </aside>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Lower level APIs exposed to us as Web Developers.</h3>
+          <h4>Best of both worlds?</h4>
+          <aside class="notes">
+          React team wanting DIV + Accessibility API means complete lack of faith in HTML standards. Support is the problem. You need browser support, which is already tough, and AT support which is not standardized.
+          </aside>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>The same accessibility rules apply.</h3>
+          <aside class="notes">
+            <ul>
+              <li>Labels</li>
+              <li>Color contrast</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <h2>Mobile Contexts</h2>
           <ul>
             <li>Native</li>
             <li>Hybrid</li>
             <li>
               <span style="position: relative">
+                <span class="offscreen">Current section</span>
                 Mobile web
-                <span class="circled fragment" aria-hidden="true">Mobile web</span>
+                <span class="circled mobileweb" aria-hidden="true">Mobile web</span>
               </span>
             </li>
           </ul>
@@ -235,6 +302,11 @@
         <section>
           <h3 class="h2-style">Accessibility is easier to get right on native platforms.</h3>
           <div class="large-tag" style="font-family: serif">¯\_(ツ)_/¯</div>
+          <aside class="notes">
+          Less targets.
+          The Web is trying to be everything for everyone.
+          Frameworks? which ones? Android has fragmentation, so is it really that much easier?
+          </aside>
         </section>
 
         <section data-background-color="#fff" data-background-image="img/come-at-me-bro.gif" class="light-theme">
@@ -252,16 +324,16 @@
         <section data-background-color="#fff" class="light-theme">
           <h3>iOS Safari with <br>Accessibility Node Inspector</h3>
           <figure>
-            <div class="layeredFragments">
-              <div>
-                <img src="img/safari-a11y-inspector.png" class="plain" alt="Safari Web Inspector with Develop menu open">
-              </div>
-              <div class="fragment" style="min-height:700px; background-color:#fff;">
-                <img src="img/safari-tools.jpg" class="plain" alt="iPad with Developer Tools open on laptop">
-              </div>
+            <div>
+              <img src="img/safari-a11y-inspector.png" alt="Safari Web Inspector with Develop menu open" style="max-width: 70%;">
             </div>
-            <figcaption><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html" title="About Safari Web Inspector">Safari How-to</a></figcaption>
+            <figcaption><a href="https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html" title="About Safari Web Inspector">Web Inspector How-to</a></figcaption>
           </figure>
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>Safari Accessibility Audit?</h3>
+          <a href="https://bugs.webkit.org/show_bug.cgi?id=149614"><img src="img/webkit-web-a11y-audit.png" alt=""></a>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -278,16 +350,6 @@
             <img src="img/remote-debug-android.png" alt="" class="plain" style="min-height:400px;">
             <figcaption><a href="https://developer.chrome.com/devtools/docs/remote-debugging" title="Remote Debugging on Android with Chrome">Chrome How-to</a></figcaption>
           </figure>
-        </section>
-
-        <section data-background-color="#333">
-          <h3 class="h4-style">That's cool but...</h3>
-          <h4 class="h2-style">We&rsquo;re in desperate need of mobile web accessibility testing tools.</h4>
-        </section>
-
-        <section data-background-color="#333">
-          <h3>Safari Accessibility Audit?</h3>
-          <img src="img/cat-placeholder.jpg" alt="I don't always use a placeholder, but when I do, it's a cat picture" style="min-height: 600px;">
         </section>
 
         <section data-background-color="#fff" class="light-theme">
@@ -361,14 +423,16 @@
         </section>
 
         <section class="light-theme" data-background-color="#fff">
-          <h3>How to really hide content with CSS</h3>
+          <h3>How to hide content with CSS</h3>
+          <h4>&hellip;but it&rsquo;s not animatable</h4>
           <div class="large-tag inset-width" style="margin-top:0.5em;">
           <pre><code class="css"> display: none;</code></pre>
           </div>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h3>Disabling interactive elements in HTML</h3>
+          <p><strong>You could:</strong></p>
+          <h3>Disable interactive elements <br>in HTML</h3>
           <div class="large-tag" style="margin-top:0.5em;">
       <pre><code class="html">  tabindex="-1"</code></pre>
       <pre><code class="html">  aria-hidden="true"</code></pre>
@@ -386,8 +450,8 @@
         <section>
           <h2>Let&rsquo;s Recap</h2>
           <ul>
-            <!-- <li>Mobile is growing</li> -->
-            <li>We need testing tools</li>
+            <li>Mobile is growing</li>
+            <li>We need mobile testing tools</li>
             <li class="fragment">Optimize for humans</li>
             <li class="fragment">Use semantics</li>
             <li class="fragment">Craft source &amp; tab order</li>
