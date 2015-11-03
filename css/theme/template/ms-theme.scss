@@ -321,10 +321,17 @@ body {
   h3 strong {
     color: $linkColor;
   }
+  .subhead {
+    color: #ccc;
+    font-style: italic; 
+  }
+  .shadow {
+    text-shadow: 4px 4px 8px #000;
+  }
   .giant {
-    color: $tertiaryColor !important;
+    @extend .shadow;
+    color: $tertiaryColor;
     font-size: 6em;
-    text-shadow: 4px 4px 8px #000 !important;
   }
   strong {
     font-weight: bold;
@@ -889,6 +896,18 @@ body {
     height: 100%;
     min-height: 60px;
     min-width: 60px;
+  }
+  .svg-icon {
+    display: inline-block;
+    margin: 2% 2% 0;
+    vertical-align: top;
+    width: 12%;
+
+    svg {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
   }
   .crossed-out {
     height: 6px;
