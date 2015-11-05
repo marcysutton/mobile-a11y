@@ -410,6 +410,18 @@ body {
   background-color: #333;
   padding: 1em; }
 
+.reveal .small-tag {
+  font-size: 2em; }
+  .reveal .small-tag pre code {
+    font-size: 1.35em; }
+
+.reveal .medium-tag {
+  color: #ecff05;
+  font-family: Menlo, monospace;
+  font-size: 2em; }
+  .reveal .medium-tag pre code {
+    font-size: 1.85em; }
+
 .reveal .large-tag, .reveal .larger-tag {
   color: #ecff05;
   font-family: Menlo, monospace;
@@ -721,6 +733,9 @@ body {
   margin: 2% 2% 0;
   vertical-align: top;
   width: 12%; }
+  .reveal .svg-icon.inline {
+    margin: 1% 2% 1% 0;
+    max-width: 75px; }
   .reveal .svg-icon svg {
     display: block;
     height: 100%;
@@ -913,8 +928,5 @@ body {
     left: 0;
     position: absolute;
     top: -.2em;
-    transform: rotate(-1deg); }
-  .reveal .circled.hybrid:before {
-    width: 3.25em; }
-  .reveal .circled.mobileweb:before {
+    transform: rotate(-1deg);
     width: 5.5em; }

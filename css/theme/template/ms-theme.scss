@@ -495,6 +495,21 @@ body {
   .large-tag-wrap {
     background-color: $darkColor;
     padding: 1em;
+  } 
+  .small-tag {
+    font-size: 2em; 
+    pre code {
+      font-size: 1.35em;
+    }
+  }
+  .medium-tag {
+    color: $tertiaryColor;
+    font-family: $codeFont;
+    font-size: 2em;
+
+    pre code {
+      font-size: 1.85em;
+    }
   }
   .large-tag {
     color: $tertiaryColor;
@@ -903,6 +918,11 @@ body {
     vertical-align: top;
     width: 12%;
 
+    &.inline {
+      margin: 1% 2% 1% 0;
+      max-width: 75px;
+    }
+
     svg {
       display: block;
       height: 100%;
@@ -1135,17 +1155,7 @@ body {
       position: absolute;
       top: -.2em;
       transform: rotate(-1deg);
-    }
-
-    &.hybrid {
-      &:before {
-        width: 3.25em;
-      }
-    }
-    &.mobileweb {
-      &:before {
-        width: 5.5em;
-      }
+      width: 5.5em;
     }
   }
 }
