@@ -451,12 +451,22 @@
 
         <section data-background-color="#fff" class="light-theme">
           <h3 style="margin-bottom:0;">Hidden links shouldn't be reachable</h3>
-          <p class="subhead" style="margin-bottom:0.5em;"><small>Angular Material dialog: before</small></p>
+          <p class="subhead" style="margin-bottom:0.5em;"><small style="color:#666">Angular Material dialog: Before</small></p>
           <iframe width="1090" height="610" src="https://www.youtube.com/embed/PRzmjKLWxGE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen title="Angular Material Dialog: Before"></iframe>
         </section>
 
+        <section class="light-theme" data-background-color="#fff">
+          <h3 style="margin-bottom:0;">Hiding content from screen readers</h3>
+          <p class="subhead"><small style="color:#666;">(One technique)</small></p>
+          <div class="medium-tag" style="margin-top:0.5em;">
+          <pre><code class="css"> &lt;div style="display: none;"></code></pre>
+          </div>
+          <p style="margin-top:1em;"><small>Fully hide any element, but it&rsquo;s not animatable.</small></p>
+        </section>
+
         <section data-background-color="#fff" class="light-theme">
-          <h3>How to disable<br>interactive elements in HTML</h3>
+          <h3 style="margin-bottom:0;">Disabling interactive elements in HTML</h3>
+          <p class="subhead"><small style="color:#666">(Another technique)</small></p>
           <div class="small-tag" style="margin-top:0.5em;">
       <pre><code class="html"> 
  &lt;div aria-hidden="true">
@@ -464,27 +474,58 @@
  &lt;/div>
         </code></pre>
           </div>
-          <p class="subhead" style="margin-top:1em;"><small>Keep content visible, but hide from a screen reader.</small></p>
+          <p style="margin-top:1em"><small>Keep content visible, but hide from a screen reader.</small></p>
         </section>
 
-        <section class="light-theme" data-background-color="#fff">
-          <h3 style="margin-bottom:0;">Hiding content from screen readers</h3>
-          <p class="subhead"><small style="color:#666;">(Another technique)</small></p>
-          <div class="medium-tag" style="margin-top:0.5em;">
-          <pre><code class="css"> &lt;div style="display: none;"></code></pre>
-          </div>
-          <p class="subhead" style="margin-top:1em;"><small>Fully hide any element, but it&rsquo;s not animatable.</small></p>
+        <!-- <section data-background-color="#fff" class="light-theme">
+          <h3>Modal Dialogs</h3>
+          <ul>
+            <li>Use semantics</li>
+            <li>Trap focus</li>
+            <li>Disable background</li>
+          </ul>
+        </section>
+ -->
+        <section data-background-color="#fff" class="light-theme">
+          <h3 style="margin-bottom:0;">Inert: disabling the background</h3>
+          <p class="subhead"><small><a style="color:#666" href="https://github.com/angular/material/blob/master/src/components/dialog/dialog.js#L841">Angular Material dialog</a></small></p>
+          <pre><code class="javascript" style="height:580px;">
+  function walkDOM(element) {
+    while (element.parentNode) {
+      if (element === document.body) {
+        return;
+      }
+      var children = element.parentNode.children;
+      for (var i = 0; i < children.length; i++) {
+        // skip over child if it is an ascendant of the dialog
+        if (element !== children[i]) {
+          children[i].setAttribute('aria-hidden', isHidden);
+        }
+      }
+      walkDOM(element = element.parentNode);
+    }
+  }
+          </code></pre>
+        <p><small>Protip: Insert dialog next to <code>&lt;body></code>, and you don&rsquo;t need this much code</small></p>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
           <h3 style="margin-bottom:0;">Content properly disabled</h3>
-          <p class="subhead" style="margin-bottom:0.5em;"><small>Angular Material dialog: after</small></p>
+          <p class="subhead" style="margin-bottom:0.5em;"><small style="color:#666">Angular Material dialog: After</small></p>
           <iframe width="1090" height="610" src="https://www.youtube.com/embed/CJ0Agr0Rx10?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen title="Angular Material Dialog: After"></iframe>
         </section>
 
         <section data-background-color="#fff" class="light-theme">
           <h2 class="h1-style">State of Tooling</h2>
-        </section>      
+        </section>
+
+        <section data-background-color="#fff" class="light-theme">
+          <h3>What We Want</h3>
+          <ul>
+            <li>Mobile browser testing tools</li>
+            <li>Screen reader testing tools</li>
+          </ul>
+        </section>
 
         <section data-background-image="img/powermapper-aria-support-circled.png">
           <h3 class="offscreen"><a href="http://www.powermapper.com/tests/screen-readers/aria/">PowerMapper Screen Reader Compatibility Matrix</a></h3>
@@ -538,8 +579,8 @@
         </section>
 
         <section data-background-color="#fff" class="light-theme">
-          <h4>What we want: audit a tethered device</h4>
-          <img src="img/chrome-android-audit.png" alt="Chrome Accessibility Developer Tools Audit on Android" style="width:75%;">
+          <h4>Chrome Accessibility Developer Tools + <br>Android Tethering</h4>
+          <img src="img/chrome-android-audit.png" alt="Chrome Accessibility Developer Tools Audit on Android" style="width:65%;">
           <p class="subhead"><small style="color: #666;">&hellip;except mobile Chrome isn't popular for accessibility</small></p>
         </section>
 
